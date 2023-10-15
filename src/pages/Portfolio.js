@@ -68,26 +68,26 @@ export default function Portfolio() {
             <img src={i1} alt="Profile" className="rounded-full w-72 h-72 mx-auto mb-4" />
             <div className="flex flex-col items-center justify-center">
               <h1 className="text-3xl font-bold">Biftu Shibbire</h1>
-              <p className="text-xl w-1/2 m-6 text-gradient-to-r from-gray-700 to-gray-700' : 'text-gray-800">
+              <p className="text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700' : 'text-gray-800">
                 4th Year Software Engineering Student at Addis Ababa Institute of Technology
               </p>
-              <p className="text-gray-900">Web Developer</p>
+              <p className="text-gray-300">Web Developer</p>
             </div>
           </div>
         </header>
-        <section id="aboutMe" className="flex justify-center items-center mx-4">
-  <div className="rounded-md bg-gradient-to-r from-slate-600 to-slate-500 w-full">
+        <section id="aboutMe" className="flex flex-col justify-center items-center mx-2">
+  <div className="rounded-md bg-gradient-to-r from-slate-600 to-slate-500 w-3/4 ">
     <div className="mx-auto flex flex-col justify-center items-center p-6">
       <h2 className="text-2xl font-bold mb-4">About Me</h2>
-      <p className="text-lg leading-relaxed">
+      <p className="text-lg leading-relaxed ">
         I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive
-        and user-friendly websites that deliver a great user experience.
+        and user-friendly websites that deliver a great user experience.As a web developer, I am committed to staying up-to-date with the latest trends and modern frameworks in the industry. I believe in building strong relationships and providing regular updates to ensure client satisfaction.
       </p>
     </div>
     <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
       <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
         <a
-          href="https://github.com/your-github-profile-url"
+          href="https://github.com/Bonittas?tab=repositories"
           className="hover:text-white text-gray-800 px-4 py-2  rounded-md flex flex-col items-center justify-center transition-colors duration-300"
           target="_blank"
           rel="noopener noreferrer"
@@ -98,7 +98,7 @@ export default function Portfolio() {
       </div>
       <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
         <a
-          href="https://www.linkedin.com/your-linkedin-profile-url"
+          href="https://www.linkedin.com/in/biftu-shibbire-20411a228/"
           className="hover:text-white text-gray-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
           target="_blank"
           rel="noopener noreferrer"
@@ -310,7 +310,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold mb-2">Email</h3>
                 <p className="mb-4">biftushibbire@gmail.com</p>
                 <a
-                  href="mailto:example@example.com"
+                  href="biftushibbire@gmail.com"
                   className="text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-md transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
@@ -321,7 +321,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold mb-2">Phone</h3>
                 <p className="mb-4">+251-902-284-924</p>
                 <a
-                  href="tel:1234567890"
+                  href="tel:+251902284924"
                   className="text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-md transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faPhone} className="mr-2" />
@@ -334,13 +334,13 @@ export default function Portfolio() {
       </div>
       <footer className="bg-gradient-to-r from-slate-500 to-slate-700 text-center p-4">
         <div className="flex justify-center items-center mb-4">
-          <a href="https://github.com/example" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
+          <a href="https://github.com/Bonittas?tab=repositories" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faGithub} className="text-white text-xl mx-2" />
           </a>
-          <a href="https://linkedin.com/in/example" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
+          <a href="https://www.linkedin.com/in/biftu-shibbire-20411a228/" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl  mx-2" />
           </a>
-          <a href="mailto:example@example.com" className="text-white hover:text-gray-900">
+          <a href="biftushibbire@gmail.com" className="text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl  mx-2" />
           </a>
         </div>
