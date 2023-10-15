@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faUser, faCode, faLaptopCode, faCommentAlt,faArrowRight, faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import i1 from '../img/img1.avif';
+import i1 from '../img/img1.jpg';
 import i2 from '../img/i2.jpg';
 import i3 from '../img/i3.jpg';
 import i4 from '../img/i4.jpg';
@@ -44,25 +44,25 @@ export default function Portfolio() {
   return (
     
     <div className="absolute top-0 bg-gradient-to-r from-slate-700 to-slate-700 min-h-screen font-cursive text-white">
-      <nav className="flex justify-center sticky top-0 bg-gradient-to-r from-slate-500 to-slate-700 z-20 bg-opacity-50 h-24 flex-wrap">
-  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
-    <FontAwesomeIcon icon={faUser} className="text-gray-800 mx-2" />
-    About Me
-  </button>
-  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('projects')}>
-    <FontAwesomeIcon icon={faLaptopCode} className="text-gray-800 mx-2" />
-    Projects
-  </button>
-  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
-    <FontAwesomeIcon icon={faCommentAlt} className="text-gray-800 mx-2" />
-    Contact Me
-  </button>
-  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
-    <FontAwesomeIcon icon={faCode} className="text-gray-800 mx-2" />
-    Programming Languages
-  </button>
-</nav>
-      <div className="container mx-8 py-8 text-white">
+      <nav className="flex justify-center sticky top-0 px-2 bg-gradient-to-r from-slate-500 to-slate-700 z-20 bg-opacity-50 h-24">
+        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
+          <FontAwesomeIcon icon={faUser} className="text-gray-800 mx-2" />
+          About Me
+        </button>
+        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('projects')}>
+          <FontAwesomeIcon icon={faLaptopCode} className="text-gray-800 mx-2" />
+          Projects
+        </button>
+        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
+          <FontAwesomeIcon icon={faCommentAlt} className="text-gray-800 mx-2" />
+          Contact Me
+        </button>
+        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
+          <FontAwesomeIcon icon={faCode} className="text-gray-800 mx-2" />
+          Programming Languages
+        </button>
+      </nav>
+      <div className="container mx-2 py-8 text-white">
       <header className="  rounded-md  py-3">
           <div className="flex flex-col items-center justify-center">
             <img src={i1} alt="Profile" className="rounded-full w-72 h-72 mx-auto mb-4" />
@@ -75,40 +75,38 @@ export default function Portfolio() {
             </div>
           </div>
         </header>
-        <section id="aboutMe" className="flex justify-center ">
-          <div className='rounded-md bg-gradient-to-r from-slate-600 to-slate-500 w-1/2'>
-          <div className=" mx-auto flex flex-col justify-center items-center p-6">
-            <h2 className="text-2xl font-bold mb-4">About Me</h2>
-            <p className="text-lg leading-relaxed ">
-              I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive and
-              user-friendly websites that deliver a great user experience.I'm constantly staying up to date with the latest web development trends and technologies to ensure that my websites are built using the most efficient and modern practices.I enjoy working closely with clients and other team members to understand their goals and deliver websites that meet their specific needs.
-            </p>
-          </div>
-          <div className='flex   gap-16 justify-center items-center my-8 '>
-          <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700' : 'bg-slate-800 hover:bg-gray-900 p-6 w-32 h-32">
-              
-                <a
-                  href="https://github.com/Bonittas?tab=repositories"
-                  className="hover:text-white text-gray-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
-                >
-                  <FontAwesomeIcon icon={faGithub} className="mr-2 text-6xl" />
-                  Github
-                </a>
-              </div>
-              <div className="rounded-full flex flex-col items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700' : 'bg-gray-800 hover:bg-gray-700 p-6 w-32 h-32">
-              
-              <a
-                href="https://www.linkedin.com/in/biftu-shibbire-20411a228/"
-                className="hover:text-white text-gray-800 px-4 py-2 rounded-md  transition-colors duration-300"
-              >
-                <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-6xl" />
-                Linkedin
-              </a>
-            </div>
-              </div>
-              </div>
-        </section>
-        <section id="programmingLanguages" className="mt-8">
+        <section id="aboutMe" className="flex justify-center max-w-screen-lg mx-4">
+  <div className="rounded-md bg-gradient-to-r from-slate-600 to-slate-500 w-full">
+    <div className="mx-auto flex flex-col justify-center items-center p-6">
+      <h2 className="text-2xl font-bold mb-4">About Me</h2>
+      <p className="text-lg leading-relaxed">
+        I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive
+        and user-friendly websites that deliver a great user experience.
+      </p>
+    </div>
+    <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
+      <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700">
+        <a
+          href="tel:1234567890"
+          className="hover:text-white text-gray-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+        >
+          <FontAwesomeIcon icon={faGithub} className="mr-2 text-6xl" />
+          Github
+        </a>
+      </div>
+      <div className="rounded-full flex flex-col items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700">
+        <a
+          href="tel:1234567890"
+          className="hover:text-white text-gray-800 px-4 py-2 rounded-md  transition-colors duration-300"
+        >
+          <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-6xl" />
+          Linkedin
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+        <section id="programmingLanguages" className="mt-8 mx-2">
           <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
             <h2 className="text-2xl font-bold mb-4">Programming Languages & Frameworks</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
@@ -140,10 +138,10 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
-        <section id="projects" className="mt-8">
+        <section id="projects" className="mt-8 mx-2">
       <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-2">
           <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700">
         
             <img
@@ -233,7 +231,7 @@ export default function Portfolio() {
             </button>
           </div>
 <div>
-          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700">
+          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 mx-2">
             <img
               src={i14}
               alt="Project 2"
@@ -300,7 +298,7 @@ export default function Portfolio() {
         </div>
       )}
     </section>
-        <section id="contactMe" className="mt-8">
+        <section id="contactMe" className="mt-8 mx-2">
           <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
             <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -308,7 +306,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold mb-2">Email</h3>
                 <p className="mb-4">biftushibbire@gmail.com</p>
                 <a
-                  href="https://github.com/Bonittas?tab=repositories"
+                  href="mailto:example@example.com"
                   className="text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-md transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
@@ -319,7 +317,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold mb-2">Phone</h3>
                 <p className="mb-4">+251-902-284-924</p>
                 <a
-                  href="+251902284924"
+                  href="tel:1234567890"
                   className="text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-md transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faPhone} className="mr-2" />
@@ -332,13 +330,13 @@ export default function Portfolio() {
       </div>
       <footer className="bg-gradient-to-r from-slate-500 to-slate-700 text-center p-4">
         <div className="flex justify-center items-center mb-4">
-          <a href="https://github.com/Bonittas?tab=repositories" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
+          <a href="https://github.com/example" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faGithub} className="text-white text-xl mx-2" />
           </a>
-          <a href="https://www.linkedin.com/in/biftu-shibbire-20411a228/" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
+          <a href="https://linkedin.com/in/example" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl  mx-2" />
           </a>
-          <a href="biftushibbire@gmail.com" className="text-white hover:text-gray-900">
+          <a href="mailto:example@example.com" className="text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl  mx-2" />
           </a>
         </div>
