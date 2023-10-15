@@ -81,7 +81,7 @@ export default function Portfolio() {
             <h2 className="text-2xl font-bold mb-4">About Me</h2>
             <p className="text-lg leading-relaxed ">
               I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive and
-              user-friendly websites that deliver a great user experience.
+              user-friendly websites that deliver a great user experience.I'm constantly staying up to date with the latest web development trends and technologies to ensure that my websites are built using the most efficient and modern practices.I enjoy working closely with clients and other team members to understand their goals and deliver websites that meet their specific needs.
             </p>
           </div>
           <div className='flex   gap-16 justify-center items-center my-8 '>
