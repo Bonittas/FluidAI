@@ -44,24 +44,24 @@ export default function Portfolio() {
   return (
     
     <div className="absolute top-0 bg-gradient-to-r from-slate-700 to-slate-700 min-h-screen font-cursive text-white">
-      <nav className="flex justify-center sticky top-0 bg-gradient-to-r from-slate-500 to-slate-700 z-20 bg-opacity-50 h-24">
-        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
-          <FontAwesomeIcon icon={faUser} className="text-gray-800 mx-2" />
-          About Me
-        </button>
-        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('projects')}>
-          <FontAwesomeIcon icon={faLaptopCode} className="text-gray-800 mx-2" />
-          Projects
-        </button>
-        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
-          <FontAwesomeIcon icon={faCommentAlt} className="text-gray-800 mx-2" />
-          Contact Me
-        </button>
-        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
-          <FontAwesomeIcon icon={faCode} className="text-gray-800 mx-2" />
-          Programming Languages
-        </button>
-      </nav>
+      <nav className="flex justify-center sticky top-0 bg-gradient-to-r from-slate-500 to-slate-700 z-20 bg-opacity-50 h-24 flex-wrap">
+  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
+    <FontAwesomeIcon icon={faUser} className="text-gray-800 mx-2" />
+    About Me
+  </button>
+  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('projects')}>
+    <FontAwesomeIcon icon={faLaptopCode} className="text-gray-800 mx-2" />
+    Projects
+  </button>
+  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
+    <FontAwesomeIcon icon={faCommentAlt} className="text-gray-800 mx-2" />
+    Contact Me
+  </button>
+  <button className="mr-3 mb-2 text-white hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
+    <FontAwesomeIcon icon={faCode} className="text-gray-800 mx-2" />
+    Programming Languages
+  </button>
+</nav>
       <div className="container mx-8 py-8 text-white">
       <header className="  rounded-md  py-3">
           <div className="flex flex-col items-center justify-center">
@@ -88,7 +88,7 @@ export default function Portfolio() {
           <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700' : 'bg-slate-800 hover:bg-gray-900 p-6 w-32 h-32">
               
                 <a
-                  href="tel:1234567890"
+                  href="https://github.com/Bonittas?tab=repositories"
                   className="hover:text-white text-gray-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faGithub} className="mr-2 text-6xl" />
@@ -98,7 +98,7 @@ export default function Portfolio() {
               <div className="rounded-full flex flex-col items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700' : 'bg-gray-800 hover:bg-gray-700 p-6 w-32 h-32">
               
               <a
-                href="tel:1234567890"
+                href="https://www.linkedin.com/in/biftu-shibbire-20411a228/"
                 className="hover:text-white text-gray-800 px-4 py-2 rounded-md  transition-colors duration-300"
               >
                 <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-6xl" />
@@ -308,7 +308,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold mb-2">Email</h3>
                 <p className="mb-4">biftushibbire@gmail.com</p>
                 <a
-                  href="mailto:example@example.com"
+                  href="https://github.com/Bonittas?tab=repositories"
                   className="text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-md transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
@@ -319,7 +319,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold mb-2">Phone</h3>
                 <p className="mb-4">+251-902-284-924</p>
                 <a
-                  href="tel:1234567890"
+                  href="+251902284924"
                   className="text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-md transition-colors duration-300"
                 >
                   <FontAwesomeIcon icon={faPhone} className="mr-2" />
@@ -332,13 +332,13 @@ export default function Portfolio() {
       </div>
       <footer className="bg-gradient-to-r from-slate-500 to-slate-700 text-center p-4">
         <div className="flex justify-center items-center mb-4">
-          <a href="https://github.com/example" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
+          <a href="https://github.com/Bonittas?tab=repositories" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faGithub} className="text-white text-xl mx-2" />
           </a>
-          <a href="https://linkedin.com/in/example" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
+          <a href="https://www.linkedin.com/in/biftu-shibbire-20411a228/" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faLinkedin} className="text-white text-xl  mx-2" />
           </a>
-          <a href="mailto:example@example.com" className="text-white hover:text-gray-900">
+          <a href="biftushibbire@gmail.com" className="text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl  mx-2" />
           </a>
         </div>
