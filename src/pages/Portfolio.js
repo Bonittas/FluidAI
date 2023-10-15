@@ -43,7 +43,7 @@ export default function Portfolio() {
   };
   return (
     
-    <div className="absolute top-0 bg-gradient-to-r from-slate-700 to-slate-700 min-h-screen font-cursive text-white">
+    <div className="absolute top-0 bg-gradient-to-r from-slate-700 to-slate-700 w-full font-cursive text-white">
       <nav className="flex justify-center sticky top-0 px-2 bg-gradient-to-r from-slate-500 to-slate-700 z-20 bg-opacity-50 h-24">
         <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
           <FontAwesomeIcon icon={faUser} className="text-gray-800 mx-2" />
@@ -75,7 +75,7 @@ export default function Portfolio() {
             </div>
           </div>
         </header>
-        <section id="aboutMe" className="flex justify-center max-w-screen-lg mx-4">
+        <section id="aboutMe" className="flex justify-center items-center mx-4">
   <div className="rounded-md bg-gradient-to-r from-slate-600 to-slate-500 w-full">
     <div className="mx-auto flex flex-col justify-center items-center p-6">
       <h2 className="text-2xl font-bold mb-4">About Me</h2>
@@ -85,19 +85,23 @@ export default function Portfolio() {
       </p>
     </div>
     <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
-      <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700">
+      <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
         <a
-          href="tel:1234567890"
-          className="hover:text-white text-gray-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+          href="https://github.com/your-github-profile-url"
+          className="hover:text-white text-gray-800 px-4 py-2  rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} className="mr-2 text-6xl" />
+          <FontAwesomeIcon icon={faGithub} className="mr-2 py-4 text-6xl flex items-center justify-center " />
           Github
         </a>
       </div>
-      <div className="rounded-full flex flex-col items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700">
+      <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
         <a
-          href="tel:1234567890"
-          className="hover:text-white text-gray-800 px-4 py-2 rounded-md  transition-colors duration-300"
+          href="https://www.linkedin.com/your-linkedin-profile-url"
+          className="hover:text-white text-gray-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-6xl" />
           Linkedin
