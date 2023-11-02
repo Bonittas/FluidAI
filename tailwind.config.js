@@ -4,8 +4,18 @@ module.exports = {
   theme: {
     fontFamily: {
       cursive: ['CursiveFontName', 'cursive', 'sans-serif'],
+      sans: ['Helvetica', 'Arial', 'sans-serif'],
+      serif: ['Georgia', 'serif'],
+
     },
-    extend: {},
+    extend: {
+      borderWidth: {
+        '3': '3px',
+      },
+      borderColor: {
+        'gradient': 'linear-gradient(to right, #3B82F6, #8B5CF6)',
+      },
+    },
   },
   plugins: [],
 };

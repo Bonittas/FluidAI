@@ -1,9 +1,10 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import 'tailwindcss/tailwind.css'
-
+import ResumePDF from '../Biftu Shibbire.pdf'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faUser, faCode, faLaptopCode, faCommentAlt,faArrowRight, faBriefcase } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone, faUser,faFilePdf,faDatabase,  faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faBriefcase, faMobileAndroidAlt,   } from '@fortawesome/free-solid-svg-icons';
+import { faPython, faJava, faHtml5, faCss3, faJs, faNodeJs,faReact, faCss3Alt,  } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin , faBootstrap,} from '@fortawesome/free-brands-svg-icons';
 import i1 from '../img/img1.jpg';
 import i2 from '../img/i2.jpg';
 import i3 from '../img/i3.jpg';
@@ -27,6 +28,10 @@ import i5 from '../img/i5.jpg';
 
 import { Link,useLocation } from 'react-router-dom';
 export default function Portfolio() {
+  const borderGradientStyles = {
+    boxShadow: "inset 0 0 0 2px #3B82F6, inset 0 0 0 4px #8B5CF6",
+  };
+  
   const scrollToSection = (target) => {
     const section = document.getElementById(target);
     section.scrollIntoView({ behavior: 'smooth' });
@@ -41,11 +46,18 @@ export default function Portfolio() {
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
+
+  const [showText, setShowText] = useState(false);
+
+  useEffect(() => {
+    setShowText(true);
+  }, []);
+
   return (
     
-    <div className="absolute top-0 bg-gradient-to-r from-slate-700 to-slate-700 w-full font-cursive text-white">
-      <nav className="flex justify-center sticky top-0 px-2 bg-gradient-to-r from-slate-500 to-slate-700 z-20 bg-opacity-50 h-24">
-        <button className="mr-4 text-white hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
+    <div className="absolute top-0 bg-gradient-to-r from-slate-400 to-slate-700 w-full font-custom text-white">
+      <nav className="flex justify-center sticky text-xl font-bold top-0 px-2 bg-gradient-to-r from-slate-500 to-slate-700 z-20 bg-opacity-50 h-24">
+        <button className="mr-4 text-white hover:text-gray-900 " onClick={() => scrollToSection('aboutMe')}>
           <FontAwesomeIcon icon={faUser} className="text-gray-800 mx-2" />
           About Me
         </button>
@@ -63,36 +75,40 @@ export default function Portfolio() {
         </button>
       </nav>
       <div className="container mx-2 py-8 text-white">
-      <header className="  rounded-md  py-3">
-          <div className="flex flex-col items-center justify-center">
-            <img src={i1} alt="Profile" className="rounded-full w-72 h-72 mx-auto mb-4" />
-            <div className="flex flex-col items-center justify-center">
-              <h1 className="text-3xl font-bold">Biftu Shibbire</h1>
-              <p className="text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700' : 'text-gray-800">
-                4th Year Software Engineering Student at Addis Ababa Institute of Technology
-              </p>
-              <p className="text-gray-300">Web Developer</p>
-            </div>
-          </div>
-        </header>
+      <header className="rounded-md py-3">
+      <div className="flex flex-col items-center font-cursive justify-center">
+        <img src={i1} alt="Profile" className="rounded-full w-72 h-72 mx-auto mb-4" />
+        <div className="flex flex-col items-center justify-center">
+          <h1 className={showText ? "text-3xl font-bold animate-text-appear" : "hidden"}>
+            Hello, I am Biftu Shibbire
+          </h1>
+          <p className={showText ? "text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
+            4th Year Software Engineering Student at Addis Ababa Institute of Technology
+          </p>
+          <p className={showText ? "text-gray-300 animate-text-appear" : "hidden"}>
+            Web Developer
+          </p>
+        </div>
+      </div>
+    </header>
         <section id="aboutMe" className="flex flex-col justify-center items-center mx-2">
-  <div className="rounded-md bg-gradient-to-r from-slate-600 to-slate-500 w-3/4 ">
+  <div className="rounded-md bg-gradient-to-r from-slate-600 to-slate-500 w-full md:w-3/4">
     <div className="mx-auto flex flex-col justify-center items-center p-6">
       <h2 className="text-2xl font-bold mb-4">About Me</h2>
-      <p className="text-lg leading-relaxed ">
+      <p className="text-lg leading-relaxed">
         I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive
-        and user-friendly websites that deliver a great user experience.As a web developer, I am committed to staying up-to-date with the latest trends and modern frameworks in the industry. I believe in building strong relationships and providing regular updates to ensure client satisfaction.
+        and user-friendly websites that deliver a great user experience. As a web developer, I am committed to staying up-to-date with the latest trends and modern frameworks in the industry. I believe in building strong relationships and providing regular updates to ensure client satisfaction.
       </p>
     </div>
     <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
       <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
         <a
           href="https://github.com/Bonittas?tab=repositories"
-          className="hover:text-white text-gray-800 px-4 py-2  rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+          className="hover:text-white text-gray-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faGithub} className="mr-2 py-4 text-6xl flex items-center justify-center " />
+          <FontAwesomeIcon icon={faGithub} className="mr-2 py-2 text-6xl flex items-center justify-center " />
           Github
         </a>
       </div>
@@ -107,41 +123,102 @@ export default function Portfolio() {
           Linkedin
         </a>
       </div>
+      <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
+        <a
+          href={ResumePDF}
+          className="hover:text-white text-gray-800 px-2 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faFilePdf} className="text-5xl flex flex-col justify-center" />
+          Resume
+        </a>
+      </div>
     </div>
   </div>
 </section>
-        <section id="programmingLanguages" className="mt-8 mx-2">
-          <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
-            <h2 className="text-2xl font-bold mb-4">Programming Languages & Frameworks</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
-              <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 p-6">
-                <h3 className="text-xl font-bold mb-2">Programming Languages</h3>
-                <ul>
-                  <li className="p-1">Python</li>
-                  <li className="p-1">Java</li>
-                  <li className="p-1">HTML5</li>
-                  <li className="p-1">CSS3</li>
-                  <li className="p-1">JavaScript</li>
-                  <li className="p-1">Node.js</li>
-                  <li className="p-1">MySQL</li>
-                  <li className="p-1">MongoDB</li>
-                  <li className="p-1">Flutter/Dart</li>
-                </ul>
-              </div>
-              <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 p-6">
-                <h3 className="text-xl font-bold mb-2">Frameworks</h3>
-                <ul>
-                  <li className="p-1">React</li>
-                  <li className="p-1">Next.js</li>
-                  <li className="p-1">Express.js</li>
-                  <li className="p-1">Nest.js</li>
-                  <li className="p-1">Bootstrap</li>
-                  <li className="p-1">Tailwind CSS</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+<section id="programmingLanguages" className="mt-8 mx-2">
+  <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
+    <h2 className="text-2xl font-bold mb-4">Programming Languages & Frameworks</h2>
+    <div className="grid grid-cols-1  gap-32">
+    <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 p-6">
+      <h3 className="text-xl font-bold mb-2">Programming Languages</h3>
+      <ul className="my-8 flex p-3 grid grid-cols-4 gap-12">
+      <li className="py-3 w-56 border-purple-500  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faPython} className="mr-2 text-6xl" />
+         Python
+        </li>
+        <li className="py-3 w-56 border-purple-500  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faJava} className="mr-2 text-6xl" />
+          Java
+        </li>
+        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faHtml5} className="mr-2 text-6xl" />
+          HTML5
+        </li>
+        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faCss3} className="mr-2 text-6xl" />
+          CSS3
+        </li>
+        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faJs} className="mr-2 text-6xl" />
+          JavaScript
+        </li>
+        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faNodeJs} className="mr-2 text-6xl" />
+          Node.js
+        </li>
+        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
+          MySQL
+        </li>
+        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
+          MongoDB
+        </li>
+        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faCode} className="mr-2 text-6xl" />
+          Dart
+        </li>
+      </ul>
+    </div>
+
+<div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 p-6">
+  <h3 className="text-xl font-bold mb-2 lex justify-center">Frameworks</h3>
+  <ul className="my-8 flex p-3 grid grid-cols-4 gap-12">
+    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+      <FontAwesomeIcon icon={faReact} className="mr-2 text-6xl" />
+      React.Js
+    </li>
+    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+<p className='font-sans font-bold text-3xl'>NEXT</p> 
+      Next.Js
+    </li>
+    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+<p className='font-sans font-bold text-3xl'>ex</p>
+      Express.Js
+    </li>
+    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <p className='font-serif font-bold text-3xl'>nest</p>
+      Nest.Js
+    </li>
+    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+      <FontAwesomeIcon icon={faBootstrap} className="mr-2 text-6xl" />
+      Bootstrap
+    </li>
+    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+      <FontAwesomeIcon icon={faCss3Alt} className="mr-2 text-6xl" />
+      Tailwind CSS
+    </li>
+    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+      <FontAwesomeIcon icon={faMobileAndroidAlt} className="mr-2 text-6xl" />
+      Flutter
+    </li>
+  </ul>
+</div>
+    </div>
+  </div>
+</section>
         <section id="projects" className="mt-8 mx-2">
       <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
@@ -217,9 +294,7 @@ export default function Portfolio() {
               My event viewing site provides a comprehensive platform to explore
               and stay informed about the latest events, and more in your area. Additionally, it offers personalized
               suggestions for the best venues and locations for birthdays,
-              weddings, graduations, and other special occasions. With detailed
-              event information, user-friendly features my site simplifies the event planning process and helps
-              you create unforgettable experiences and celebrations. 
+              weddings, graduations, and other special occasions. 
             </p>
             <button className="rounded-md m-2 shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 hover:bg-gray-700 p-4">
               <a
@@ -275,7 +350,7 @@ export default function Portfolio() {
 
             <h3 className="text-xl font-bold mb-2 p-4">iShop</h3>
             <p className="text-lg leading-relaxed p-4">
-            My supermarket site is designed to offer a convenient online shopping experience for groceries. It features a variety of categories including fruits, vegetables, beverages, snacks, and more. Users can browse through these categories and easily add products to their virtual shopping carts. The intuitive "Add to Cart" functionality allows for seamless selection and management of desired items. Stay tuned as we continue to enhance and optimize our supermarket site to provide you with a hassle-free and efficient way to shop for groceries online.                    </p>
+            My supermarket site is designed to offer a convenient online shopping experience for groceries. It features a variety of categories including fruits, vegetables, beverages, snacks, and more. Users can browse through these categories and easily add products to their virtual shopping carts. The intuitive "Add to Cart" functionality allows for seamless selection and management of desired items.  </p>
             <button className="rounded-md relative bottom-4 m-2 shadow-lg bg-gradient-to-r   from-slate-500 to-slate-700 hover:bg-gray-700 p-4">
               <a
                 href="https://keen-chimera-cb4b55.netlify.app/"
@@ -328,6 +403,7 @@ export default function Portfolio() {
                   Call Me
                 </a>
               </div>
+             
             </div>
           </div>
         </section>
@@ -344,7 +420,7 @@ export default function Portfolio() {
             <FontAwesomeIcon icon={faEnvelope} className="text-white text-xl  mx-2" />
           </a>
         </div>
-        <p className="text-white text-md font-serif">&copy; 2023 Biftu Shibbire. All rights reserved.</p>
+        <p className="text-white text-lg font-serif">&copy; 2023 Biftu Shibbire. All rights reserved.</p>
       </footer>
     </div>
   );
