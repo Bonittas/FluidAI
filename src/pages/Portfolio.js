@@ -27,7 +27,7 @@ import i16 from '../img/i16.jpg';
 
 import i6 from '../img/i6.jpg';
 import i5 from '../img/i5.jpg';
-import bg from '../img/bg.avif'
+import bg from '../img/bg.jpg'
 import { Link,useLocation } from 'react-router-dom';
 export default function Portfolio() {
   const borderGradientStyles = {
@@ -175,7 +175,7 @@ export default function Portfolio() {
             Github
           </a>
         </div>
-        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-500 to-red-300 w-32 h-32">
+        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
           <a
             href="https://www.linkedin.com/in/biftu-shibbire-20411a228/"
             className="text-white hover:text-gray-300 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
@@ -186,7 +186,7 @@ export default function Portfolio() {
             Linkedin
           </a>
         </div>
-        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-500 to-red-300 w-32 h-32">
+        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
           <a
             href={ResumePDF}
             className="text-white hover:text-gray-300 px-2 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
