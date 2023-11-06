@@ -27,7 +27,7 @@ import i16 from '../img/i16.jpg';
 
 import i6 from '../img/i6.jpg';
 import i5 from '../img/i5.jpg';
-import bg from '../img/bg1.avif'
+import bg from '../img/bg.jpg'
 import { Link,useLocation } from 'react-router-dom';
 export default function Portfolio() {
   const borderGradientStyles = {
@@ -57,7 +57,7 @@ export default function Portfolio() {
   }, []);
 
   const text = "Hello, I am Biftu Shibbire";
-  const text2 = '4th Year Software Engineering Student at Addis Ababa Institute of Technology';
+  const text2 = '4th Year Software Engineering Student at Addis Ababa Institute of Technology.';
   const text3 = "Website and Mobile App Developer";
   const [typedText, setTypedText] = useState("");
 
@@ -105,34 +105,36 @@ export default function Portfolio() {
   }, [showText, typedText, displayedText3]);
   return (
     
-    <div className="absolute top-0  text-black">
-      <img src={bg} className='absolute top-0 h-fit w-full'/>
-      <nav className="flex justify-start bg-white bg-opacity-10  sticky text-md font-bold font-custom top-0 px-2 z-20 h-24">
-        <button className="mx-4 text-purple-800 hover:text-gray-900 " onClick={() => scrollToSection('aboutMe')}>
-          <FontAwesomeIcon icon={faUser} className="text-purple-800 mx-2" />
+    <div className="absolute top-0  text-black mb-10">
+      <div classname="mb-4">
+      <img src={bg} className='absolute top-0 w-full mb-10'/>
+      </div>
+      <nav className="flex justify-start bg-white bg-opacity-30  sticky text-md font-bold font-custom top-0 px-2 z-40 h-24">
+        <button className="mx-4 text-red-950 hover:text-gray-900 " onClick={() => scrollToSection('aboutMe')}>
+          <FontAwesomeIcon icon={faUser} className=" text-red-950 mx-2" />
           About Me
         </button>
-        <button className="mr-4 text-purple-800 hover:text-gray-900" onClick={() => scrollToSection('projects')}>
-          <FontAwesomeIcon icon={faLaptopCode} className="text-purple-800 mx-2" />
+        <button className="mr-4  text-red-950 hover:text-gray-900" onClick={() => scrollToSection('projects')}>
+          <FontAwesomeIcon icon={faLaptopCode} className=" text-red-950 mx-2" />
           Projects
         </button>
-        <button className="mr-4 text-purple-800 hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
-          <FontAwesomeIcon icon={faCommentAlt} className="text-purple-800 mx-2" />
+        <button className="mr-4  text-red-950 hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
+          <FontAwesomeIcon icon={faCommentAlt} className=" text-red-950 mx-2" />
           Contact Me
         </button>
-        <button className="mr-4 text-purple-800 hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
-          <FontAwesomeIcon icon={faCode} className="text-purple-800 mx-2" />
+        <button className="mr-4  text-red-950 hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
+          <FontAwesomeIcon icon={faCode} className=" text-red-950 mx-2" />
           Programming Languages
         </button>
       </nav>
-      <div className="container mx-2 py-8 text-purple-800 z-30 mb-12">
+      <div className="container mx-2 py-8  text-red-950 z-30 mb-12">
   <section>
     <header className="rounded-md py-3 z-30">
       <div className="flex flex-col items-start font-sans justify-start">
         <img
           src={i1}
           alt="Profile"
-          className="rounded-full relative left-48 w-72 flex items-start justify-start bg-purple-800 h-72 mb-4 z-30"
+          className="rounded-full relative left-48 w-72 flex items-start justify-start bg-red-800 h-72 mb-4 z-30"
         />
         <div className="flex flex-col items-center justify-center z-30">
           <div className={showText ? "text-3xl font-bold animate-text-appear" : "hidden"}>
@@ -146,14 +148,14 @@ export default function Portfolio() {
           </p>
         </div>
       </div>
-      <div className={showText ? "text-5xl text-gray-300 animate-wave" : "hidden"}>
+      <div className={showText ? "z-30 text-5xl text-gray-300 animate-wave" : "hidden"}>
         <FaGem />
       </div>
     </header>
   </section>
 
-  <section id="aboutMe" className="flex flex-col text-black justify-center items-center mx-2 z-30 mt-40">
-    <div className="rounded-md bg-gradient-to-r from-purple-100 to-purple-200 w-full md:w-3/4 z-30">
+  <section id="aboutMe" className="flex flex-col text-black justify-center items-center mx-2 mt-64">
+    <div className="rounded-md bg-gradient-to-r from-slate-300 to-red-100 w-full md:w-3/4">
       <div className="mx-auto flex flex-col justify-center items-center p-6">
         <h2 className="text-2xl font-bold mb-4">About Me</h2>
         <p className="text-lg leading-relaxed">
@@ -162,10 +164,10 @@ export default function Portfolio() {
         </p>
       </div>
       <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
-        <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
+        <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
           <a
             href="https://github.com/Bonittas?tab=repositories"
-            className="hover:text-white text-purple-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+            className="text-white hover:text-gray-300  px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -173,10 +175,10 @@ export default function Portfolio() {
             Github
           </a>
         </div>
-        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
+        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
           <a
             href="https://www.linkedin.com/in/biftu-shibbire-20411a228/"
-            className="hover:text-white text-purple-800 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+            className="text-white hover:text-gray-300 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -184,10 +186,10 @@ export default function Portfolio() {
             Linkedin
           </a>
         </div>
-        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-gray-200 to-gray-700 w-32 h-32">
+        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
           <a
             href={ResumePDF}
-            className="hover:text-white text-purple-800 px-2 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+            className="text-white hover:text-gray-300 px-2 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -199,80 +201,80 @@ export default function Portfolio() {
     </div>
   </section>
 
-<section id="programmingLanguages" className="mt-8 mx-2 text-purple-800">
+<section id="programmingLanguages" className="mt-8 mx-2  text-black">
   <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
-    <h2 className="text-2xl font-bold mb-4">Programming Languages & Frameworks</h2>
-    <div className="grid grid-cols-1  gap-32">
-    <div className="rounded-md shadow-lg bg-gradient-to-r from--500 to-slate-700 p-6">
-      <h3 className="text-xl font-bold mb-2">Programming Languages</h3>
+    <h2 className="text-2xl font-bold mb-4 border rounded-full w-fit h-fit p-3 bg-gradient-to-r from-slate-300 to-red-100 font-cursive ">Programming Languages & Frameworks</h2>
+    <div className="grid grid-cols-1  gap-32 ">
+    <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
+      <h3 className="text-xl font-bold  mb-2 flex flex-col justify-center items-center">Programming Languages</h3>
       <ul className="my-8 p-3 grid grid-cols-4 gap-12">
-      <li className="py-3 w-56 border-purple-500  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+      <li className="py-3 w-56 border-white  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faPython} className="mr-2 text-6xl" />
          Python
         </li>
-        <li className="py-3 w-56 border-purple-500  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faJava} className="mr-2 text-6xl" />
           Java
         </li>
-        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faHtml5} className="mr-2 text-6xl" />
           HTML5
         </li>
-        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faCss3} className="mr-2 text-6xl" />
           CSS3
         </li>
-        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faJs} className="mr-2 text-6xl" />
           JavaScript
         </li>
-        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faNodeJs} className="mr-2 text-6xl" />
           Node.js
         </li>
-        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
           MySQL
         </li>
-        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
           MongoDB
         </li>
-        <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faCode} className="mr-2 text-6xl" />
           Dart
         </li>
       </ul>
     </div>
 
-<div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 p-6">
-  <h3 className="text-xl font-bold mb-2 lex justify-center">Frameworks</h3>
+<div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
+  <h3 className="text-xl font-bold mb-2 flex  justify-center">Frameworks</h3>
   <ul className="my-8 p-3 grid grid-cols-4 gap-12">
-    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
       <FontAwesomeIcon icon={faReact} className="mr-2 text-6xl" />
       React.Js
     </li>
-    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
 <p className='font-sans font-bold text-3xl'>NEXT</p> 
       Next.Js
     </li>
-    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
 <p className='font-sans font-bold text-3xl'>ex</p>
       Express.Js
     </li>
-    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
     <p className='font-serif font-bold text-3xl'>nest</p>
       Nest.Js
     </li>
-    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
       <FontAwesomeIcon icon={faBootstrap} className="mr-2 text-6xl" />
       Bootstrap
     </li>
-    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
       <FontAwesomeIcon icon={faCss3Alt} className="mr-2 text-6xl" />
       Tailwind CSS
     </li>
-    <li className="py-3 w-56 border-purple-500 rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-purple-500 hover:border-gradient-to-r hover:from-purple-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
       <FontAwesomeIcon icon={faMobileAndroidAlt} className="mr-2 text-6xl" />
       Flutter
     </li>
@@ -281,11 +283,11 @@ export default function Portfolio() {
     </div>
   </div>
 </section>
-        <section id="projects" className="mt-8 mx-2">
+        <section id="projects" className="mt-8 mx-2 text-black">
       <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-2">
-          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700">
+          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100">
         
             <img
               src={i7}
@@ -358,7 +360,7 @@ export default function Portfolio() {
               suggestions for the best venues and locations for birthdays,
               weddings, graduations, and other special occasions. 
             </p>
-            <button className="rounded-md m-2 shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 hover:bg-gray-700 p-4">
+            <button className="rounded-md m-2 shadow-lg bg-gradient-to-r from-slate-300 to-slate-100 hover:bg-gray-700 p-4">
               <a
                 href="https://eventstream.netlify.app/"
                 className="flex items-center justify-center"
@@ -372,7 +374,7 @@ export default function Portfolio() {
             </button>
           </div>
 <div>
-          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700 mx-2">
+          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 mx-2">
             <img
               src={i14}
               alt="Project 2"
@@ -413,7 +415,7 @@ export default function Portfolio() {
             <h3 className="text-xl font-bold mb-2 p-4">iShop</h3>
             <p className="text-lg leading-relaxed p-4">
             My supermarket site is designed to offer a convenient online shopping experience for groceries. It features a variety of categories including fruits, vegetables, beverages, snacks, and more. Users can browse through these categories and easily add products to their virtual shopping carts. The intuitive "Add to Cart" functionality allows for seamless selection and management of desired items.  </p>
-            <button className="rounded-md relative bottom-4 m-2 shadow-lg bg-gradient-to-r   from-slate-500 to-slate-700 hover:bg-gray-700 p-4">
+            <button className="rounded-md relative bottom-4 m-2 shadow-lg bg-gradient-to-r   from-slate-300 to-red-100 hover:bg-gray-700 p-4">
               <a
                 href="https://keen-chimera-cb4b55.netlify.app/"
                 className="flex items-center justify-center"
@@ -439,11 +441,11 @@ export default function Portfolio() {
         </div>
       )}
     </section>
-        <section id="contactMe" className="mt-8 mx-2">
+        <section id="contactMe" className="mt-8 mx-2 text-black">
           <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
             <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700' : 'bg-slate-800 p-6">
+              <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
                 <h3 className="text-xl font-bold mb-2">Email</h3>
                 <p className="mb-4">biftushibbire@gmail.com</p>
                 <a
@@ -454,7 +456,7 @@ export default function Portfolio() {
                   Send Email
                 </a>
               </div>
-              <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-500 to-slate-700' : 'bg-slate-800 p-6">
+              <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
                 <h3 className="text-xl font-bold mb-2">Phone</h3>
                 <p className="mb-4">+251-902-284-924</p>
                 <a
@@ -470,7 +472,7 @@ export default function Portfolio() {
           </div>
         </section>
       </div>
-      <footer className="bg-gradient-to-r from-slate-500 to-slate-700 text-center p-4">
+      <footer className="bg-gradient-to-r from-slate-300 to-red-950 text-center p-4">
         <div className="flex justify-center items-center mb-4">
           <a href="https://github.com/Bonittas?tab=repositories" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faGithub} className="text-white text-xl mx-2" />
