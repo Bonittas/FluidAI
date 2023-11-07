@@ -1,11 +1,11 @@
 import React,{useState,useEffect} from 'react';
 import 'tailwindcss/tailwind.css'
-import { HiHand } from 'react-icons/hi';
+import { FaMongo } from 'react-icons/hi';
 import {FaGem} from 'react-icons/fa'
 import ResumePDF from '../Biftu Shibbire.pdf'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faUser,faFilePdf,faDatabase,  faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faBriefcase, faMobileAndroidAlt,   } from '@fortawesome/free-solid-svg-icons';
-import { faPython, faJava, faHtml5, faCss3, faJs, faNodeJs,faReact, faCss3Alt,  } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone, faUser,faFilePdf,faDatabase,faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faBriefcase, faMobileAndroidAlt, faLeaf  } from '@fortawesome/free-solid-svg-icons';
+import { faPython, faJava, faHtml5, faCss3, faJs, faNodeJs,faReact, faCss3Alt, } from '@fortawesome/free-brands-svg-icons';
 import { faGithub, faLinkedin , faBootstrap,} from '@fortawesome/free-brands-svg-icons';
 import i1 from '../img/img1.jpg';
 import i2 from '../img/i2.jpg';
@@ -49,7 +49,6 @@ export default function Portfolio() {
     setSelectedImage(null);
   };
 
-  
   const [showText, setShowText] = useState(false);
 
   useEffect(() => {
@@ -57,7 +56,7 @@ export default function Portfolio() {
   }, []);
 
   const text = "Hello, I am Biftu Shibbire";
-  const text2 = '4th Year Software Engineering Student at Addis Ababa Institute of Technology. I am Website and Mobile App Developer.';
+  const text2 = "4th Year Software Engineering Student at Addis Ababa Institute of Technology. ";
   const text3 = "Website and Mobile App Developer";
   const [typedText, setTypedText] = useState("");
 
@@ -94,7 +93,7 @@ export default function Portfolio() {
   useEffect(() => {
     let timeout;
 
-    if (showText && typedText === text2 && displayedText3.length < text3.length) {
+    if (showText && typedText === text && displayedText3.length < text3.length) {
       timeout = setTimeout(() => {
         const nextLetter = text3.charAt(displayedText3.length);
         setDisplayedText3(prevDisplayedText3 => prevDisplayedText3 + nextLetter);
@@ -108,7 +107,6 @@ export default function Portfolio() {
     <div className="absolute top-0  text-black mb-10">
       <div className='h-full'>
       <img src={bg} className='absolute top-0 fit w-full mb-10'/>
-      
       <nav className="flex justify-start bg-white bg-opacity-30  sticky text-md font-bold font-custom top-0 px-2 z-40 h-24">
         <button className="mx-4 text-red-950 hover:text-gray-900 " onClick={() => scrollToSection('aboutMe')}>
           <FontAwesomeIcon icon={faUser} className=" text-red-950 mx-2" />
@@ -137,13 +135,13 @@ export default function Portfolio() {
           className="rounded-full relative bottom-4 lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800  mb-4 z-30"
         />
         <div className="flex flex-col items-center justify-center z-30">
-          <div className={showText ? "m-2 text-3xl font-bold animate-text-appear" : "hidden"}>
+          <div className={showText ? "ml-3  text-3xl font-bold animate-text-appear" : "hidden"}>
             {typedText}
           </div>
-          <p className={showText && typedText === text ? "font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
+          <p className={showText && typedText === text ? "font-bold text-xl w-3/4 m-4 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
             {displayedText2}
           </p>
-          <p className={showText && typedText === text3 ? "font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
+          <p className={showText && typedText === text2 ? "font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
             {displayedText3}
           </p>
         </div>
@@ -158,7 +156,7 @@ export default function Portfolio() {
   <section id="aboutMe" className="flex flex-col text-black justify-center items-center mx-2 mt-64">
     <div className="rounded-md bg-gradient-to-r from-slate-300 to-red-100 w-full md:w-3/4">
       <div className="mx-auto flex flex-col justify-center items-center p-6">
-        <h2 className="text-2xl font-bold mb-4 font-cursive">About Me</h2>
+        <h2 className="text-2xl  mb-4 font-cursive">About Me</h2>
         <p className="text-lg leading-relaxed">
           I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive
           and user-friendly websites that deliver a great user experience. As a web developer, I am committed to staying up-to-date with the latest trends and modern frameworks in the industry. I believe in building strong relationships and providing regular updates to ensure client satisfaction.
@@ -204,10 +202,10 @@ export default function Portfolio() {
 
 <section id="programmingLanguages" className="mt-8 mx-2  text-black">
   <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
-    <h2 className="text-2xl font-bold mb-4 border rounded-full w-fit h-fit p-3 bg-gradient-to-r from-slate-300 to-red-100 font-cursive ">Programming Languages & Frameworks</h2>
+    <h2 className="text-2xl mb-4 border rounded-full w-fit h-fit p-3 font-cursive ">Programming Languages & Frameworks</h2>
     <div className="grid grid-cols-1  gap-32 ">
     <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-4">
-      <h3 className="text-xl font-bold  m-2 flex flex-col justify-center items-center">Programming Languages</h3>
+      <h3 className="text-xl  m-2 flex font-bold flex-col justify-center items-center">Programming Languages</h3>
       <ul className="my-8 p-3 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2    gap-12">
       <li className="py-3 w-56 border-white  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faPython} className="mr-2 text-6xl" />
@@ -234,7 +232,7 @@ export default function Portfolio() {
           Node.js
         </li>
         <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
-          <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
+          <FontAwesomeIcon icon={faLeaf} className="mr-2 text-6xl" />
           MySQL
         </li>
         <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
@@ -286,7 +284,7 @@ export default function Portfolio() {
 </section>
         <section id="projects" className="mt-8 mx-2 text-black">
       <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
-        <h2 className="text-2xl font-bold mb-4">Projects</h2>
+        <h2 className="text-2xl border rounded-full w-fit h-fit p-3 font-cursive mb-4  ">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-2">
           <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100">
         
@@ -444,7 +442,7 @@ export default function Portfolio() {
     </section>
         <section id="contactMe" className="mt-8 mx-2 text-black">
           <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
-            <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+            <h2 className="text-2xl font-cursive border p-3 rounded-full mb-4">Contact Me</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
                 <h3 className="text-xl font-bold mb-2">Email</h3>
@@ -473,7 +471,8 @@ export default function Portfolio() {
           </div>
         </section>
       </div>
-      <footer className="bg-gradient-to-r from-slate-300 to-red-950 text-center p-4 mt-6">
+     
+      <footer className="bg-gradient-to-r from-slate-500 to-red-500 text-center p-4 mt-6">
         <div className="flex justify-center items-center mb-4">
           <a href="https://github.com/Bonittas?tab=repositories" target="_blank" rel="noopener noreferrer" className="mr-4 text-white hover:text-gray-900">
             <FontAwesomeIcon icon={faGithub} className="text-white text-xl mx-2" />
