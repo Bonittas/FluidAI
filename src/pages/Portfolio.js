@@ -103,100 +103,107 @@ export default function Portfolio() {
     return () => clearTimeout(timeout);
   }, [showText, typedText, displayedText3]);
   return (
-    
-<div className=" top-0 text-black mb-2">
-  <div className="mb-1">
-    <img src={bg} className="absolute h-cover top-0 w-full" />
-    <nav className="flex justify-start text-md font-bold font-custom absolute top-0 px-2 z-50">
-      <div className="fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-40 h-20 z-50">
-        <button className="mx-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
-          <FontAwesomeIcon icon={faUser} className="text-red-950 mx-2" />
-          About Me
-        </button>
-        <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('projects')}>
-          <FontAwesomeIcon icon={faLaptopCode} className="text-red-950 mx-2" />
-          Projects
-        </button>
-        <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
-          <FontAwesomeIcon icon={faCommentAlt} className="text-red-950 mx-2" />
-          Contact Me
-        </button>
-        <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
-          <FontAwesomeIcon icon={faCode} className="text-red-950 mx-2" />
-          Programming Languages
-        </button>
+    <>
+    <div className='bg-gray-100'>
+    <div className='mb-6'>
+      <img src={bg} className="absolute h-cover top-0 w-full" />
+      <nav className="flex justify-start text-md font-bold font-custom absolute top-0 px-2 z-50">
+        <div className="fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-40 h-20 z-50">
+          <button className="mx-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
+            <FontAwesomeIcon icon={faUser} className="text-red-950 mx-2" />
+            About Me
+          </button>
+          <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('projects')}>
+            <FontAwesomeIcon icon={faLaptopCode} className="text-red-950 mx-2" />
+            Projects
+          </button>
+          <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
+            <FontAwesomeIcon icon={faCommentAlt} className="text-red-950 mx-2" />
+            Contact Me
+          </button>
+          <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
+            <FontAwesomeIcon icon={faCode} className="text-red-950 mx-2" />
+            Programming Languages
+          </button>
+        </div>
+      </nav>
+    </div>
+    <section className="container mx-2 text-red-950 z-30 mb-16">
+  <header className="rounded-md py-3  z-30 mb-12">
+    <section className="mb-36 flex ">
+      <div className="relative flex  flex-col items-start font-sans my-12 justify-start mb-4 relative">
+        <img
+          src={i1}
+          alt="Profile"
+          className="relative rounded-full lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800 my-12 z-30"
+        />
+        <div className="  flex flex-col items-center justify-center relative">
+          <div className={showText ? "relative mb-4 ml-8 text-3xl font-bold animate-text-appear z-40" : "hidden"}>
+            {typedText}
+          </div>
+          <p className={showText && typedText === text ? "relative font-bold text-xl w-3/4 m-4 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear z-40" : "hidden"}>
+            {displayedText2}
+          </p>
+          <p className={showText && typedText === text2 ? "relative mb-6 font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear z-40" : "hidden"}>
+            {displayedText3}
+          </p>
+        </div>
       </div>
-    </nav>
-    <section className="relative top-20 container mx-2 py-8 text-red-950 z-30 mb-16">
-      <header className="rounded-md py-3 z-30 mb-12y">
-        <div className="flex flex-col items-start font-sans my-12 justify-start mb-4">
-          <img
-            src={i1}
-            alt="Profile"
-            className="rounded-full relative bottom-4 lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800  mb-12 z-30"
-          />
-          <div className="flex flex-col items-center justify-center z-30 mb-4">
-            <div className={showText ? "mb-4 ml-3 text-3xl font-bold animate-text-appear" : "hidden"}>
-              {typedText}
-            </div>
-            <p className={showText && typedText === text ? "font-bold text-xl w-3/4 m-4 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
-              {displayedText2}
-            </p>
-            <p className={showText && typedText === text2 ? "mb-6 font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
-              {displayedText3}
-            </p>
+    </section>
+  </header>
+</section>
+<section>
+  <div className='text-white'>
+    Weocome to my site
+  </div>
+</section>
+    <section id="aboutMe" className="mt-16 flex flex-col text-black justify-center items-center mx-2 my-8 z-50">
+      <div className="relative top-6 rounded-md bg-gradient-to-r from-slate-300 to-red-100 w-full md:w-3/4 my-8" style={{ padding: '12px' }}>
+        <div className="mx-auto flex flex-col justify-center items-center p-6">
+          <h2 className="text-2xl mb-4 font-cursive border rounded-full p-3">About Me</h2>
+          <p className="text-lg leading-relaxed">
+            I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive
+            and user-friendly websites that deliver a great user experience. As a web developer, I am committed to staying up-to-date with the latest trends and modern frameworks in the industry. I believe in building strong relationships and providing regular updates to ensure client satisfaction.
+          </p>
+        </div>
+        <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
+          <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
+            <a
+              href="https://github.com/Bonittas?tab=repositories"
+              className="text-white hover:textgray-100  px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} className="mr-2 py-2 text-6xl flex items-center justify-center " />
+              Github
+            </a>
+          </div>
+          <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
+            <a
+              href="https://www.linkedin.com/in/biftu-shibbire-20411a228/"
+              className="text-white hover:text-gray-100 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-6xl" />
+              Linkedin
+            </a>
+          </div>
+          <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
+            <a
+              href={ResumePDF}
+              className="text-white hover:text-gray-100 px-2 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faFilePdf} className="text-5xl flex flex-col justify-center" />
+              Resume
+            </a>
           </div>
         </div>
-      </header>
+      </div>
     </section>
-  </div>
-
-  <section id="aboutMe" className="flex flex-col text-black justify-center items-center mx-2 my-8 z-40 ">
-<div className="rounded-md bg-gradient-to-r from-slate-300 to-red-100 w-full md:w-3/4 my-8" style={{ padding: '12px' }}>      <div className="mx-auto flex flex-col justify-center items-center p-6">
-      <h2 className="text-2xl  mb-4 font-cursive border rounded-full p-3">About Me</h2>
-
-        <p className="text-lg leading-relaxed">
-          I am a passionate web developer with expertise in front-end and backend technologies. I love creating responsive
-          and user-friendly websites that deliver a great user experience. As a web developer, I am committed to staying up-to-date with the latest trends and modern frameworks in the industry. I believe in building strong relationships and providing regular updates to ensure client satisfaction.
-        </p>
-      </div>
-      <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
-        <div className="rounded-full shadow-lg justify-center items-center mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
-          <a
-            href="https://github.com/Bonittas?tab=repositories"
-            className="text-white hover:text-gray-100  px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faGithub} className="mr-2 py-2 text-6xl flex items-center justify-center " />
-            Github
-          </a>
-        </div>
-        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
-          <a
-            href="https://www.linkedin.com/in/biftu-shibbire-20411a228/"
-            className="text-white hover:text-gray-100 px-4 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-6xl" />
-            Linkedin
-          </a>
-        </div>
-        <div className="rounded-full flex items-center justify-center shadow-lg mb-8 bg-gradient-to-r from-slate-400 to-red-300 w-32 h-32">
-          <a
-            href={ResumePDF}
-            className="text-white hover:text-gray-100 px-2 py-2 rounded-md flex flex-col items-center justify-center transition-colors duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon icon={faFilePdf} className="text-5xl flex flex-col justify-center" />
-            Resume
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
 <section id="programmingLanguages" className="mt-8 mx-2  text-black">
   <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
@@ -483,6 +490,7 @@ export default function Portfolio() {
         </div>
         <p className="text-white text-lg font-serif">&copy; 2023 Biftu Shibbire. All rights reserved.</p>
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
