@@ -104,55 +104,55 @@ export default function Portfolio() {
   }, [showText, typedText, displayedText3]);
   return (
     
-    <div className=" top-0  text-black mb-2">
-      <div className="mb-1">
-      <img src={bg} className='relative top-0 w-full '/>
-      <nav className="flex justify-start text-md font-bold font-custom   absolute top-0 px-2 z-50 ">
-        <div className='fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-40 h-20 z-50'>
-        <button className="mx-4 text-red-950 hover:text-gray-900 " onClick={() => scrollToSection('aboutMe')}>
-          <FontAwesomeIcon icon={faUser} className=" text-red-950 mx-2" />
+<div className=" top-0 text-black mb-2">
+  <div className="mb-1">
+    <img src={bg} className="absolute h-cover top-0 w-full" />
+    <nav className="flex justify-start text-md font-bold font-custom absolute top-0 px-2 z-50">
+      <div className="fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-40 h-20 z-50">
+        <button className="mx-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
+          <FontAwesomeIcon icon={faUser} className="text-red-950 mx-2" />
           About Me
         </button>
-        <button className="mr-4  text-red-950 hover:text-gray-900" onClick={() => scrollToSection('projects')}>
-          <FontAwesomeIcon icon={faLaptopCode} className=" text-red-950 mx-2" />
+        <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('projects')}>
+          <FontAwesomeIcon icon={faLaptopCode} className="text-red-950 mx-2" />
           Projects
         </button>
-        <button className="mr-4  text-red-950 hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
-          <FontAwesomeIcon icon={faCommentAlt} className=" text-red-950 mx-2" />
+        <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('contactMe')}>
+          <FontAwesomeIcon icon={faCommentAlt} className="text-red-950 mx-2" />
           Contact Me
         </button>
-        <button className="mr-4  text-red-950 hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
-          <FontAwesomeIcon icon={faCode} className=" text-red-950 mx-2" />
+        <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('programmingLanguages')}>
+          <FontAwesomeIcon icon={faCode} className="text-red-950 mx-2" />
           Programming Languages
         </button>
-        </div>
-      </nav>
-  <section className='absolute top-0 container mx-2 py-8  text-red-950 z-30 mb-1'>
-    <header className="rounded-md py-3 z-30">
-      <div className="flex flex-col items-start font-sans my-16 justify-start">
-        <img
-          src={i1}
-          alt="Profile"
-          className="rounded-full relative bottom-4 lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800  mb-4 z-30"
-        />
-        <div className="flex flex-col items-center justify-center z-30">
-          <div className={showText ? "ml-3  text-3xl font-bold animate-text-appear" : "hidden"}>
-            {typedText}
-          </div>
-          <p className={showText && typedText === text ? "font-bold text-xl w-3/4 m-4 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
-            {displayedText2}
-          </p>
-          <p className={showText && typedText === text2 ? "font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
-            {displayedText3}
-          </p>
-        </div>
       </div>
-    </header>
-  </section>
+    </nav>
+    <section className="relative top-20 container mx-2 py-8 text-red-950 z-30 mb-16">
+      <header className="rounded-md py-3 z-30 mb-12y">
+        <div className="flex flex-col items-start font-sans my-12 justify-start mb-4">
+          <img
+            src={i1}
+            alt="Profile"
+            className="rounded-full relative bottom-4 lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800  mb-12 z-30"
+          />
+          <div className="flex flex-col items-center justify-center z-30 mb-4">
+            <div className={showText ? "mb-4 ml-3 text-3xl font-bold animate-text-appear" : "hidden"}>
+              {typedText}
+            </div>
+            <p className={showText && typedText === text ? "font-bold text-xl w-3/4 m-4 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
+              {displayedText2}
+            </p>
+            <p className={showText && typedText === text2 ? "mb-6 font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear" : "hidden"}>
+              {displayedText3}
+            </p>
+          </div>
+        </div>
+      </header>
+    </section>
   </div>
+
   <section id="aboutMe" className="flex flex-col text-black justify-center items-center mx-2 my-8 z-40 ">
-    <div className="rounded-md bg-gradient-to-r from-slate-300 to-red-100 w-full md:w-3/4 ">
-      <div className="mx-auto flex flex-col justify-center items-center p-6">
+<div className="rounded-md bg-gradient-to-r from-slate-300 to-red-100 w-full md:w-3/4 my-8" style={{ padding: '12px' }}>      <div className="mx-auto flex flex-col justify-center items-center p-6">
       <h2 className="text-2xl  mb-4 font-cursive border rounded-full p-3">About Me</h2>
 
         <p className="text-lg leading-relaxed">
