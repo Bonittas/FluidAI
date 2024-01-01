@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react';
 import 'tailwindcss/tailwind.css'
 import { FaMongo } from 'react-icons/hi';
 import {FaGem} from 'react-icons/fa'
-import ResumePDF from '../Biftu Shibbire.pdf'; 
+import ResumePDF from '../MyResume.pdf'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faUser,faFilePdf,faDatabase,faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faBriefcase, faMobileAndroidAlt, faLeaf  } from '@fortawesome/free-solid-svg-icons';
 import { faPython, faJava, faHtml5, faCss3, faJs, faNodeJs,faReact, faCss3Alt, } from '@fortawesome/free-brands-svg-icons';
@@ -108,9 +108,9 @@ export default function Portfolio() {
     <div className='mb-6'>
       <img src={bg} className="absolute h-cover top-0 w-full" />
       <nav className="flex justify-start text-md font-bold font-custom absolute top-0 px-2 z-50">
-        <div className="fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-40 h-20 z-50">
+        <div className="text-2xl fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-40 h-20 z-50">
           <button className="mx-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
-            <FontAwesomeIcon icon={faUser} className="text-red-950 mx-2" />
+            <FontAwesomeIcon icon={faUser} className="text-red-950 mx-2 " />
             About Me
           </button>
           <button className="mr-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('projects')}>
@@ -131,12 +131,7 @@ export default function Portfolio() {
     <section className="container mx-2 text-red-950 z-30 mb-16">
   <header className="rounded-md py-3  z-30 mb-12">
     <section className="mb-36 flex ">
-      <div className="relative flex  flex-col items-start font-sans my-12 justify-start mb-4 relative">
-        <img
-          src={i1}
-          alt="Profile"
-          className="relative rounded-full lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800 my-12 z-30"
-        />
+    <div className="relative flex flex-col items-start font-sans my-12 justify-start mb-4"> <img src={i1} alt="Profile" className="relative rounded-full lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800 my-12 z-30 animate-spin-slow" />
         <div className="  flex flex-col items-center justify-center relative">
           <div className={showText ? "relative mb-4 ml-8 text-3xl font-bold animate-text-appear z-40" : "hidden"}>
             {typedText}
@@ -236,14 +231,8 @@ export default function Portfolio() {
           <FontAwesomeIcon icon={faNodeJs} className="mr-2 text-6xl" />
           Node.js
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
-          <FontAwesomeIcon icon={faLeaf} className="mr-2 text-6xl" />
-          MySQL
-        </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
-          <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
-          MongoDB
-        </li>
+       
+      
         <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faCode} className="mr-2 text-6xl" />
           Dart
@@ -282,6 +271,23 @@ export default function Portfolio() {
       <FontAwesomeIcon icon={faMobileAndroidAlt} className="mr-2 text-6xl" />
       Flutter
     </li>
+  </ul>
+</div>
+<div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
+  <h3 className="text-xl font-bold mb-2 flex font-cursive  justify-center">Databases</h3>
+  <ul className="my-8 p-3 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-12">
+  <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
+          MongoDB
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faLeaf} className="mr-2 text-6xl" />
+          MySQL
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faLeaf} className="mr-2 text-6xl" />
+          PostgreSql
+        </li>
   </ul>
 </div>
     </div>
