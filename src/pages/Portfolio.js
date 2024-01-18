@@ -5,7 +5,7 @@ import {FaGem} from 'react-icons/fa'
 import ResumePDF from '../MyResume.pdf'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone, faUser,faFilePdf,faDatabase,faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faBriefcase, faMobileAndroidAlt, faLeaf  } from '@fortawesome/free-solid-svg-icons';
-import { faPython, faJava, faHtml5, faCss3, faJs, faNodeJs,faReact, faCss3Alt, } from '@fortawesome/free-brands-svg-icons';
+import { faPython, faJava, faHtml5, faCss3, faJs, faNodeJs,faReact, faCss3Alt, faGolang, faTrello, faSlack, faJira, } from '@fortawesome/free-brands-svg-icons';
 import { faGithub, faLinkedin , faBootstrap,} from '@fortawesome/free-brands-svg-icons';
 import i1 from '../img/img1.jpg';
 import i2 from '../img/i2.jpg';
@@ -108,7 +108,7 @@ export default function Portfolio() {
     <div className='mb-6'>
       <img src={bg} className="absolute h-cover top-0 w-full" />
       <nav className="flex justify-start text-md font-bold font-custom absolute top-0 px-2 z-50">
-        <div className="text-2xl fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-40 h-20 z-50">
+        <div className="text-2xl fixed flex items-center top-0 py-4 w-full bg-white bg-opacity-70 h-20 z-50">
           <button className="mx-4 text-red-950 hover:text-gray-900" onClick={() => scrollToSection('aboutMe')}>
             <FontAwesomeIcon icon={faUser} className="text-red-950 mx-2 " />
             About Me
@@ -227,12 +227,12 @@ export default function Portfolio() {
           <FontAwesomeIcon icon={faJs} className="mr-2 text-6xl" />
           JavaScript
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
-          <FontAwesomeIcon icon={faNodeJs} className="mr-2 text-6xl" />
-          Node.js
-        </li>
-       
       
+
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faGolang} className="mr-2 text-6xl" />
+          Golang
+        </li>
         <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
           <FontAwesomeIcon icon={faCode} className="mr-2 text-6xl" />
           Dart
@@ -285,8 +285,33 @@ export default function Portfolio() {
           MySQL
         </li>
         <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
-          <FontAwesomeIcon icon={faLeaf} className="mr-2 text-6xl" />
+          <FontAwesomeIcon icon={faServer} className="mr-2 text-6xl" />
           PostgreSql
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faSqlLite} className="mr-2 text-6xl" />
+          PostgreSql
+        </li>
+  </ul>
+</div>
+<div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
+  <h3 className="text-xl font-bold mb-2 flex font-cursive  justify-center">Tools</h3>
+  <ul className="my-8 p-3 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-12">
+  <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faGithub} className="mr-2 text-6xl" />
+          Github
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faTrello} className="mr-2 text-6xl" />
+          Trello
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faSlack} className="mr-2 text-6xl" />
+          Slack
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+          <FontAwesomeIcon icon={faJira} className="mr-2 text-6xl" />
+          Jira
         </li>
   </ul>
 </div>
