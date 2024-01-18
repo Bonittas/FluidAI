@@ -288,10 +288,7 @@ export default function Portfolio() {
           <FontAwesomeIcon icon={faServer} className="mr-2 text-6xl" />
           PostgreSql
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
-          <FontAwesomeIcon icon={faSqlLite} className="mr-2 text-6xl" />
-          PostgreSql
-        </li>
+
   </ul>
 </div>
 <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
