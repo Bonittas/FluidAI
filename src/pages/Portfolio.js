@@ -393,7 +393,7 @@ Unity Game Developer
         </p>
         <div className='flex justify-center items-end'>
         <button class="relative top-10 rounded-md m-4 shadow-lg bg-gradient-to-r from-green-950 to-green-600  transition duration-300 px-6 py-3">
-        <a href="https://eventstream.netlify.app/" class="flex items-center justify-center text-white hover:text-white">
+        <a href="https://keen-chimera-cb4b55.netlify.app/" class="flex items-center justify-center text-white hover:text-white">
         <p className='flex'>View Site</p>
             <FontAwesomeIcon icon={faArrowRight} className="mx-2 text-md text-end border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
           </a>
