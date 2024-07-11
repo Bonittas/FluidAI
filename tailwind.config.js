@@ -15,6 +15,9 @@ module.exports = {
       borderColor: {
         'gradient': 'linear-gradient(to right, #3B82F6, #8B5CF6)',
       },
+      colors: {
+        'neon-300': '#00FFFF', 
+      },
     },
   },
   plugins: [],

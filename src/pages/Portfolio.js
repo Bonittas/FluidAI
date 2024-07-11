@@ -4,25 +4,28 @@ import { FaMongo } from 'react-icons/hi';
 import {FaGem} from 'react-icons/fa'
 import ResumePDF from '../MyResume.pdf'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faUser,faFilePdf,faDatabase,faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faBriefcase, faMobileAndroidAlt, faLeaf  } from '@fortawesome/free-solid-svg-icons';
-import { faPython, faJava, faHtml5, faCss3, faJs, faNodeJs,faReact, faCss3Alt, faGolang, faTrello, faSlack, faJira, } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone,faUser,faChevronDown,faC,faFilePdf,faDatabase,faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faMobileAndroidAlt, faLeaf, faFire  } from '@fortawesome/free-solid-svg-icons';
+import { faPython, faJava, faHtml5,faCss3, faJs,faFirefox, faNodeJs,faReact, faCss3Alt,faDocker, faGolang, faTrello, faSlack, faJira, faTelegram, } from '@fortawesome/free-brands-svg-icons';
 import { faGithub, faLinkedin , faBootstrap,} from '@fortawesome/free-brands-svg-icons';
 import i1 from '../img/img1.jpg';
-import i2 from '../img/i2.jpg';
+import goodup from '../img/Goodup.png';
 import i3 from '../img/i3.jpg';
 import i4 from '../img/i4.jpg';
 
 import i from '../img/i1.jpg';
-import i7 from '../img/i7.jpg';
+import i7 from '../img/i8.jpg';
 import i8 from '../img/i8.jpg';
 import i9 from '../img/i9.jpg';
 import i10 from '../img/i10.jpg';
 import i11 from '../img/i11.jpg';
 import i12 from '../img/i12.jpg';
 import i13 from '../img/i13.jpg';
-import i14 from '../img/i14.jpg';
+import i14 from '../img/ishop.png';
 import i15 from '../img/i15.jpg';
 import i16 from '../img/i16.jpg';
+import oncure from '../img/oncure.png'
+import super1 from '../img/super1.png'
+import super2 from '../img/super2.png'
 
 
 import i6 from '../img/i6.jpg';
@@ -40,10 +43,17 @@ export default function Portfolio() {
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
+    setShowDropdown(false);
   };
+
+  const handleMoreClick = () => {
+    setShowDropdown(!showDropdown);
+  };
+
 
   const handleCloseModal = () => {
     setSelectedImage(null);
@@ -196,9 +206,22 @@ export default function Portfolio() {
             </a>
           </div>
         </div>
+        <div className="flex flex-wrap space-x-8 justify-center items-center my-8">
+    <div className=" text-gray-700 w-56 font-bold rounded-md flex items-center justify-center text-center px-4 py-8 shadow-lg mb-8 bg-slate-200 to-gray-400 ">
+    Full Stack Website Developer             
+
+         </div>
+         <div className=" text-gray-700 w-56 font-bold rounded-md flex items-center justify-center text-center px-4 py-8 shadow-lg mb-8 bg-slate-200 to-gray-400 ">
+         Mobile Application Developer
+          </div>
+          <div className=" text-gray-700 w-56 font-bold rounded-md flex items-center justify-center text-center px-4 py-12 shadow-lg mb-8 bg-slate-200 to-gray-400 ">
+
+Unity Game Developer          
+          </div>
+        </div>
       </div>
     </section>
-  
+    
 
 <section id="programmingLanguages" className="mt-8 mx-2  text-black">
   <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
@@ -207,35 +230,40 @@ export default function Portfolio() {
     <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-4">
       <h3 className="text-xl  m-2 flex font-bold flex-col font-cursive justify-center items-center">Programming Languages</h3>
       <ul className="my-8 p-3 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2    gap-12">
-      <li className="py-3 w-56 border-white  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+      <li className="py-3 w-56 border-white  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faPython} className="mr-2 text-6xl" />
          Python
         </li>
-        <li className="py-3 w-56 border-white  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white  rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faJava} className="mr-2 text-6xl" />
           Java
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faHtml5} className="mr-2 text-6xl" />
           HTML5
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faCss3} className="mr-2 text-6xl" />
           CSS3
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faJs} className="mr-2 text-6xl" />
           JavaScript
         </li>
       
 
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faGolang} className="mr-2 text-6xl" />
           Golang
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faCode} className="mr-2 text-6xl" />
           Dart
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
+          <p className='flex'>
+          <FontAwesomeIcon icon={faC} className="mr-2 text-6xl font-bold font-lg" /><p className='font-bold text-6xl font-cursive'>#</p></p>
+         C-Sharp C#
         </li>
       </ul>
     </div>
@@ -243,31 +271,31 @@ export default function Portfolio() {
 <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
   <h3 className="text-xl font-bold mb-2 flex font-cursive  justify-center">Frameworks</h3>
   <ul className="my-8 p-3 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-12">
-    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
       <FontAwesomeIcon icon={faReact} className="mr-2 text-6xl" />
       React.Js
     </li>
-    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
 <p className='font-sans font-bold text-3xl'>NEXT</p> 
       Next.Js
     </li>
-    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
 <p className='font-sans font-bold text-3xl'>ex</p>
       Express.Js
     </li>
-    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
     <p className='font-serif font-bold text-3xl'>nest</p>
       Nest.Js
     </li>
-    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
       <FontAwesomeIcon icon={faBootstrap} className="mr-2 text-6xl" />
       Bootstrap
     </li>
-    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
       <FontAwesomeIcon icon={faCss3Alt} className="mr-2 text-6xl" />
       Tailwind CSS
     </li>
-    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+    <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
       <FontAwesomeIcon icon={faMobileAndroidAlt} className="mr-2 text-6xl" />
       Flutter
     </li>
@@ -276,207 +304,160 @@ export default function Portfolio() {
 <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
   <h3 className="text-xl font-bold mb-2 flex font-cursive  justify-center">Databases</h3>
   <ul className="my-8 p-3 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-12">
-  <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+  <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faDatabase} className="mr-2 text-6xl" />
           MongoDB
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faLeaf} className="mr-2 text-6xl" />
           MySQL
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faServer} className="mr-2 text-6xl" />
           PostgreSql
         </li>
+                <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
+          <FontAwesomeIcon icon={faFire} className="mr-2 text-6xl" />
+          Firebase
+        </li> 
 
   </ul>
 </div>
 <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
   <h3 className="text-xl font-bold mb-2 flex font-cursive  justify-center">Tools</h3>
   <ul className="my-8 p-3 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-12">
-  <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+  <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faGithub} className="mr-2 text-6xl" />
           Github
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faTrello} className="mr-2 text-6xl" />
           Trello
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faSlack} className="mr-2 text-6xl" />
           Slack
         </li>
-        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-blue-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-blue-500">
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
           <FontAwesomeIcon icon={faJira} className="mr-2 text-6xl" />
           Jira
+        </li>
+        <li className="py-3 w-56 border-white rounded-md flex flex-col items-center justify-center shadow-lg transition duration-300 ease-in-out transform hover:scale-105 border-2 border-gradient-to-r from-gray-500 to-red-500 hover:border-gradient-to-r hover:from-red-500 hover:to-gray-500">
+          <FontAwesomeIcon icon={faDocker} className="mr-2 text-6xl" />
+          Docker
         </li>
   </ul>
 </div>
     </div>
   </div>
 </section>
-        <section id="projects" className="mt-8 mx-2 text-black">
-      <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
-        <h2 className="text-2xl border rounded-full w-fit h-fit p-3 font-cursive mb-4  ">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-2">
-          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100">
-        
-            <img
-              src={i7}
-              alt="Project 1"
-              className="rounded-md mb-4"
-              onClick={() => handleImageClick(i7)}
-            />
-
-            <div className="grid grid-cols-3 gap-2">
-            <img
-                src={i11}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i11)}
-              />
-               <img
-                src={i9}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i9)}
-              />
-               <img
-                src={i15}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i15)}
-              />
-                  
-                  <img
-                src={i8}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i8)}
-              />
-             
-            
-               <img
-                src={i6}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i6)}
-              />
-                <img
-                src={i10}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i10)}
-              />
-               <img
-                src={i2}
-                alt="Project 2"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i2)}
-              />
-               <img
-                src={i5}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i5)}
-              />
-             
-           
-             
-            </div>
-
-            <h3 className="text-xl font-bold mb-2 p-4">EventStream</h3>
-            <p className="text-lg leading-relaxed p-4">
-              My event viewing site provides a comprehensive platform to explore
-              and stay informed about the latest events, and more in your area. Additionally, it offers personalized
-              suggestions for the best venues and locations for birthdays,
-              weddings, graduations, and other special occasions. 
-            </p>
-            <button className="rounded-md m-2 shadow-lg bg-gradient-to-r from-slate-300 to-slate-100 hover:bg-gray-700 p-4">
-              <a
-                href="https://eventstream.netlify.app/"
-                className="flex items-center justify-center"
-              >
-                <p>View Site</p>
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="mx-2 text-xl border-1 p-1 border-white rounded-full bg-white bg-opacity-10"
-                />
-              </a>
-            </button>
-          </div>
-<div>
-          <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 mx-2">
-            <img
-              src={i14}
-              alt="Project 2"
-              className="rounded-md mb-4"
-              onClick={() => handleImageClick(i15)}
-            />
-
-            <div className="grid grid-cols-2 gap-2 ">
-           
-            <img
-                src={i3}
-                alt="Project 1"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i3)}
-              />
-            <img
-                src={i16}
-                alt="Project 2"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i16)}
-              />
-           
-           <img
-                src={i}
-                alt="Project 2"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i)}
-              />
-              
-              <img
-                src={i13}
-                alt="Project 2"
-                className="rounded-md mb-4"
-                onClick={() => handleImageClick(i13)}
-              />
-            </div>
-
-            <h3 className="text-xl font-bold mb-2 p-4">iShop</h3>
-            <p className="text-lg leading-relaxed p-4">
-            My supermarket site is designed to offer a convenient online shopping experience for groceries. It features a variety of categories including fruits, vegetables, beverages, snacks, and more. Users can browse through these categories and easily add products to their virtual shopping carts. The intuitive "Add to Cart" functionality allows for seamless selection and management of desired items.  </p>
-            <button className="rounded-md relative bottom-4 m-2 shadow-lg bg-gradient-to-r   from-slate-300 to-red-100 hover:bg-gray-700 p-4">
-              <a
-                href="https://keen-chimera-cb4b55.netlify.app/"
-                className="flex items-center justify-center"
-              >
-                <p>View Site</p>
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="mx-2 text-xl border-1 p-1 border-white rounded-full bg-white bg-opacity-10"
-                />
-              </a>
-            </button>
-            </div>
-          </div>
+<section id="projects" class="mt-8 mx-2 text-white py-12 bg-gradient-to-r from-slate-300 to-red-100">
+  <div class="mx-16 flex flex-col justify-center items-center">
+    <h2 class="text-3xl border rounded-full w-fit h-auto px-4 py-2 font-cursive mb-8 bg-white shadow-md text-red-950">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-12 mx-2">
+    <div class="rounded-md shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300 mx-2">
+        <img
+          src={oncure}
+          alt="Project 3"
+          class="rounded-t-md mb-4 cursor-pointer"
+          onClick={() => handleImageClick(oncure)}
+        />
+        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">Oncure</h3>
+        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
+          Virtual medication which includes features like video meetings between doctor and patient, payment integration for card, and other features.
+          <br />
+         <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span>  MERN stack with Redux, Tailwind CSS, WebRTC, Socket.io.
+        </p>
+        <div className='flex justify-center items-end'>
+        <button class="relative rounded-md m-4 shadow-lg bg-gradient-to-r from-blue-700 to-blue-400  transition duration-300 px-6 py-3">
+        <a href="https://keen-chimera-cb4b55.netlify.app/" class="flex items-center justify-center text-white hover:text-white">
+        <p className='flex'>View Site</p>
+            <FontAwesomeIcon icon={faArrowRight} className="mx-2 text-md border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
+          </a>
+        </button>
         </div>
       </div>
-
-      {selectedImage && (
-        <div
-          className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75"
-          onClick={handleCloseModal}
-        >
-          <img src={selectedImage} alt="Selected Image" className="max-w-full max-h-full" />
+      
+      <div class="rounded-md shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300 mx-2">
+        <img
+          src={i14}
+          alt="Project 2"
+          class="rounded-t-md mb-4 cursor-pointer"
+          onClick={() => handleImageClick(i14)}
+        />
+        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">iShop</h3>
+        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
+          Fully functional supermarket site with add to cart functionality and payment integration implemented.
+          <br />
+         <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span>  MongoDB, Express.js, React.js, Redux Toolkit, Tailwind CSS.
+        </p>
+        <div className='flex justify-center items-end'>
+        <button class="relative top-10 rounded-md m-4 shadow-lg bg-gradient-to-r from-green-950 to-green-600  transition duration-300 px-6 py-3">
+        <a href="https://eventstream.netlify.app/" class="flex items-center justify-center text-white hover:text-white">
+        <p className='flex'>View Site</p>
+            <FontAwesomeIcon icon={faArrowRight} className="mx-2 text-md text-end border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
+          </a>
+        </button>
         </div>
-      )}
-    </section>
+      </div>
+      <div class="rounded-md bg-gray-200 shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300">
+        <img
+          src={i7}
+          alt="Project 1"
+          className="rounded-t-md mb-4 cursor-pointer"
+          onClick={() => handleImageClick(i7)}
+        />
+        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">EventStream</h3>
+        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
+          Event comprehensive platform to explore latest events.
+          <br />
+          <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span> PostgreSQL, Express.js, React.js, Redux Toolkit, Tailwind CSS.
+        </p>
+        <div className='flex w-full justify-center items-end'>
+        <button class="relative top-16 rounded-md m-4 shadow-lg bg-gradient-to-r from-indigo-600 to-purple-500  transition duration-300 px-6 py-3">
+          <a href="https://eventstream.netlify.app/" class="flex items-center justify-center w-full text-white hover:text-white">
+            <p className='w-full'>View Site</p>
+            <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
+          </a>
+        </button>
+        </div>
+      </div>
+            <div class="rounded-md shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300 mx-2">
+        <img
+          src={goodup}
+          alt="Project 2"
+          class="rounded-t-md mb-4 cursor-pointer"
+          onClick={() => handleImageClick(i14)}
+        />
+        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">Good UP</h3>
+        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
+          Rebuilding Good-UP Hotel Management website mainly the landing page and design and other features.
+          <br />
+         <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span>  ReactJs/Next Js, Tailwind CSS.
+        </p>
+        <div className='flex justify-center items-end'>
+        <button class="relative  rounded-md m-4 shadow-lg bg-gradient-to-r from-pink-500 to-pink-800  transition duration-300 px-6 py-3">
+        <a href="https://goodup.onrender.com/" class="flex items-center justify-center text-white hover:text-white">
+        <p className='flex'>View Site</p>
+            <FontAwesomeIcon icon={faArrowRight} className="mx-2 text-md text-end border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
+          </a>
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {selectedImage && (
+    <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75" onClick={handleCloseModal}>
+      <img src={selectedImage} alt="Selected Image" class="max-w-full max-h-full" />
+    </div>
+  )}
+</section>
+
         <section id="contactMe" className="mt-8 mx-2 text-black">
           <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
             <h2 className="text-2xl font-cursive border p-3 rounded-full mb-4">Contact Me</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
               <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
                 <h3 className="text-xl font-bold mb-2">Email</h3>
                 <p className="mb-4">biftushibbire@gmail.com</p>
@@ -498,10 +479,23 @@ export default function Portfolio() {
                   <FontAwesomeIcon icon={faPhone} className="mr-2" />
                   Call Me
                 </a>
+       
               </div>
-             
+              <div className="rounded-md shadow-lg bg-gradient-to-r from-slate-300 to-red-100 p-6">
+                <h3 className="text-xl font-bold mb-2">Telegram</h3>
+                <p className="mb-4">@nenova8</p>
+                <a
+                  href="@nenova8"
+                  className="text-gray-900 bg-white hover:bg-gray-100 px-4 py-2 rounded-md transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faTelegram} className="mr-2" />
+                  Send Message
+                </a>
+              </div>
             </div>
+            
           </div>
+          
         </section>
      
       <footer className="bg-gradient-to-r from-slate-500 to-red-300 text-center p-4 mt-6">
