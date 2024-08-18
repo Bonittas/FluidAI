@@ -7,11 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhone,faUser,faChevronDown,faC,faFilePdf,faDatabase,faCode,faServer,faLaptopCode, faCommentAlt,faArrowRight, faMobileAndroidAlt, faLeaf, faFire  } from '@fortawesome/free-solid-svg-icons';
 import { faPython, faJava, faHtml5,faCss3, faJs,faFirefox, faNodeJs,faReact, faCss3Alt,faDocker, faGolang, faTrello, faSlack, faJira, faTelegram, } from '@fortawesome/free-brands-svg-icons';
 import { faGithub, faLinkedin , faBootstrap,} from '@fortawesome/free-brands-svg-icons';
+import ProjectCards from "./Projects"
 import i1 from '../img/img1.jpg';
 import goodup from '../img/Goodup.png';
 import i3 from '../img/i3.jpg';
 import i4 from '../img/i4.jpg';
-
+import abronet from "../img/Abronet.png"
+import ashewa from "../img/Ats.png"
 import i from '../img/i1.jpg';
 import i7 from '../img/i8.jpg';
 import i8 from '../img/i8.jpg';
@@ -69,7 +71,50 @@ export default function Portfolio() {
   const text2 = "4th Year Software Engineering Student at Addis Ababa Institute of Technology. ";
   const text3 = "Website and Mobile App Developer";
   const [typedText, setTypedText] = useState("");
-
+  const projects = [
+    {
+      title: 'Abronet',
+      imgPath: abronet, 
+      description: `The system functions as a business consultant and digital savings platform. Tech stacks used: MERN stack with Redux, Tailwind CSS.`,
+      demoLink: 'https://abronet.net/',
+      ghLink: 'https://github.com/nattyfeleke/equb/',
+    },
+    {
+      title: 'Oncure',
+      imgPath: oncure,
+      description: `Virtual medication which includes features like video meetings between doctor and patient, payment integration for card, and other features. Tech stacks used: MERN stack with Redux, Tailwind CSS, WebRTC, Socket.io.`,
+      demoLink: 'https://health-link-olive.vercel.app/',
+      ghLink: 'https://github.com/Bonittas/Virtual-Medication',
+    },
+    {
+      title: 'iShop',
+      imgPath: i14,
+      description: `Fully functional supermarket site with add to cart functionality and payment integration implemented. Tech stacks used: MongoDB, Express.js, React.js, Redux Toolkit, Tailwind CSS.`,
+      demoLink: 'https://keen-chimera-cb4b55.netlify.app/',
+      ghLink: 'https://github.com/Bonittas/Supermarket',
+    },
+    {
+      title: 'EventStream',
+      imgPath: i7,
+      description: `Event comprehensive platform to explore latest events. Tech stacks used: PostgreSQL, Express.js, React.js, Redux Toolkit, Tailwind CSS.`,
+      demoLink: 'https://eventstream.netlify.app/',
+      ghLink: 'https://github.com/Bonittas/Event',
+    },
+    {
+      title: 'Good UP',
+      imgPath: goodup, 
+      description: `Rebuilding Good-UP Hotel Management website mainly the landing page and design and other features. Tech stacks used: ReactJs/Next Js, Tailwind CSS.`,
+      demoLink: 'https://goodup.onrender.com/',
+      ghLink: 'https://github.com/Bonittas/GoodUp',
+    },
+    {
+      title: 'ATS Employee Management',
+      imgPath: ashewa, 
+      description: `The system manages employee data and access permissions to identify the status of each employee and the resources they can access within the company. This helps ensure a smooth transition when an employee leaves the organization. Tech stacks used: MongoDB, Express.js, React.js, Redux Toolkit, Tailwind CSS.`,
+      demoLink: 'https://goodup.onrender.com/',
+      ghLink: 'https://github.com/LeulBayesa/ashewa-project',
+    },
+  ];
   useEffect(() => {
     let timeout;
 
@@ -351,108 +396,31 @@ Unity Game Developer
     </div>
   </div>
 </section>
-<section id="projects" class="mt-8 mx-2 text-white py-12 bg-gradient-to-r from-slate-300 to-red-100">
-  <div class="mx-16 flex flex-col justify-center items-center">
-    <h2 class="text-3xl border rounded-full w-fit h-auto px-4 py-2 font-cursive mb-8 bg-white shadow-md text-red-950">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-12 mx-2">
-    <div class="rounded-md shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300 mx-2">
-        <img
-          src={oncure}
-          alt="Project 3"
-          class="rounded-t-md mb-4 cursor-pointer"
-          onClick={() => handleImageClick(oncure)}
-        />
-        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">Oncure</h3>
-        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
-          Virtual medication which includes features like video meetings between doctor and patient, payment integration for card, and other features.
-          <br />
-         <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span>  MERN stack with Redux, Tailwind CSS, WebRTC, Socket.io.
-        </p>
-        <div className='flex justify-center items-end'>
-        <button class="relative rounded-md m-4 shadow-lg bg-gradient-to-r from-blue-700 to-blue-400  transition duration-300 px-6 py-3">
-        <a href="https://health-link-olive.vercel.app/" class="flex items-center justify-center text-white hover:text-white">
-        <p className='flex'>View Site</p>
-            <FontAwesomeIcon icon={faArrowRight} className="mx-2 text-md border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
-          </a>
-        </button>
+ <section id="projects" className="mt-8 mx-2 text-white py-12 bg-gradient-to-r from-slate-300 to-red-100">
+      <div className="mx-16 flex flex-col justify-center items-center">
+        <h2 className="text-3xl border rounded-full w-fit h-auto px-4 py-2 font-cursive mb-8 bg-white shadow-md text-red-950">
+          Projects
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-12 mx-2">
+          {projects.map((project, index) => (
+            <ProjectCards
+              key={index}
+              title={project.title}
+              imgPath={project.imgPath}
+              description={project.description}
+              demoLink={project.demoLink}
+              ghLink={project.ghLink}
+            />
+          ))}
         </div>
       </div>
-      
-      <div class="rounded-md shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300 mx-2">
-        <img
-          src={i14}
-          alt="Project 2"
-          class="rounded-t-md mb-4 cursor-pointer"
-          onClick={() => handleImageClick(i14)}
-        />
-        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">iShop</h3>
-        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
-          Fully functional supermarket site with add to cart functionality and payment integration implemented.
-          <br />
-         <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span>  MongoDB, Express.js, React.js, Redux Toolkit, Tailwind CSS.
-        </p>
-        <div className='flex justify-center items-end'>
-        <button class="relative top-10 rounded-md m-4 shadow-lg bg-gradient-to-r from-green-950 to-green-600  transition duration-300 px-6 py-3">
-        <a href="https://keen-chimera-cb4b55.netlify.app/" class="flex items-center justify-center text-white hover:text-white">
-        <p className='flex'>View Site</p>
-            <FontAwesomeIcon icon={faArrowRight} className="mx-2 text-md text-end border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
-          </a>
-        </button>
-        </div>
-      </div>
-      <div class="rounded-md bg-gray-200 shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300">
-        <img
-          src={i7}
-          alt="Project 1"
-          className="rounded-t-md mb-4 cursor-pointer"
-          onClick={() => handleImageClick(i7)}
-        />
-        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">EventStream</h3>
-        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
-          Event comprehensive platform to explore latest events.
-          <br />
-          <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span> PostgreSQL, Express.js, React.js, Redux Toolkit, Tailwind CSS.
-        </p>
-        <div className='flex w-full justify-center items-end'>
-        <button class="relative top-16 rounded-md m-4 shadow-lg bg-gradient-to-r from-indigo-600 to-purple-500  transition duration-300 px-6 py-3">
-          <a href="https://eventstream.netlify.app/" class="flex items-center justify-center w-full text-white hover:text-white">
-            <p className='w-full'>View Site</p>
-            <FontAwesomeIcon icon={faArrowRight} className="ml-2 text-sm border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
-          </a>
-        </button>
-        </div>
-      </div>
-            <div class="rounded-md shadow-lg bg-white hover:bg-gradient-to-r from-indigo-100 to-purple-100 transition duration-300 mx-2">
-        <img
-          src={goodup}
-          alt="Project 2"
-          class="rounded-t-md mb-4 cursor-pointer"
-          onClick={() => handleImageClick(i14)}
-        />
-        <h3 class="text-xl font-bold mb-2 px-4 text-red-950">Good UP</h3>
-        <p class="text-lg leading-relaxed px-4 mb-4 text-gray-700">
-          Rebuilding Good-UP Hotel Management website mainly the landing page and design and other features.
-          <br />
-         <span className='font-cursive text-cursive text-red-950 font-bold'>Tech stacks used</span>  ReactJs/Next Js, Tailwind CSS.
-        </p>
-        <div className='flex justify-center items-end'>
-        <button class="relative  rounded-md m-4 shadow-lg bg-gradient-to-r from-pink-500 to-pink-800  transition duration-300 px-6 py-3">
-        <a href="https://goodup.onrender.com/" class="flex items-center justify-center text-white hover:text-white">
-        <p className='flex'>View Site</p>
-            <FontAwesomeIcon icon={faArrowRight} className="mx-2 text-md text-end border-1 p-1 border-white rounded-full bg-white bg-opacity-10" />
-          </a>
-        </button>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  {selectedImage && (
-    <div class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75" onClick={handleCloseModal}>
-      <img src={selectedImage} alt="Selected Image" class="max-w-full max-h-full" />
-    </div>
-  )}
-</section>
+      {selectedImage && (
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75" onClick={handleCloseModal}>
+          <img src={selectedImage} alt="Selected" className="max-w-full max-h-full" />
+        </div>
+      )}
+    </section>
 
         <section id="contactMe" className="mt-8 mx-2 text-black">
           <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center">
