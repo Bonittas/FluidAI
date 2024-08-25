@@ -90,7 +90,7 @@ export default function Portfolio() {
       title: 'iShop',
       imgPath: i14,
       description: `Fully functional supermarket site with add to cart functionality and payment integration implemented. Tech stacks used: MongoDB, Express.js, React.js, Redux Toolkit, Tailwind CSS.`,
-      demoLink: 'https://keen-chimera-cb4b55.netlify.app/',
+      demoLink: 'https://easyshop-njks.onrender.com/',
       ghLink: 'https://github.com/Bonittas/Supermarket',
     },
     {

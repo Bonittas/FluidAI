@@ -18,7 +18,7 @@ function ProjectCards(props) {
         />
       </div>
       </div>
-      <div className="mt-48  px-6 py-4 flex-grow">
+      <div className="mt-48 px-6 py-4 flex-grow">
         <div className="text-gray-900 dark:text-white font-bold text-xl mb-2">{props.title}</div>
         <p className="text-gray-700 dark:text-gray-200 text-base">{props.description}</p>
       </div>
