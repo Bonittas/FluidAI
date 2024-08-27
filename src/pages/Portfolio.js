@@ -68,8 +68,8 @@ export default function Portfolio() {
   }, []);
 
   const text = "Hello, I am Biftu Shibbire";
-  const text2 = "4th Year Software Engineering Student at Addis Ababa Institute of Technology. ";
-  const text3 = "Website and Mobile App Developer";
+  const text2 = "a Graduating Year Software Engineering Student at Addis Ababa Institute of Technology. ";
+  const text3 = "Website, Mobile App and Game Developer";
   const [typedText, setTypedText] = useState("");
   const projects = [
     {
@@ -87,10 +87,10 @@ export default function Portfolio() {
       ghLink: 'https://github.com/Bonittas/Virtual-Medication',
     },
     {
-      title: 'iShop',
+      title: 'Dallas Supermarket',
       imgPath: i14,
       description: `Fully functional supermarket site with add to cart functionality and payment integration implemented. Tech stacks used: MongoDB, Express.js, React.js, Redux Toolkit, Tailwind CSS.`,
-      demoLink: 'https://easyshop-njks.onrender.com/',
+      demoLink: 'https://dalas-market.onrender.com/',
       ghLink: 'https://github.com/Bonittas/Supermarket',
     },
     {
