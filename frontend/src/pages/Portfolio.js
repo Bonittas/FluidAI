@@ -28,7 +28,7 @@ import i16 from '../img/i16.jpg';
 import oncure from '../img/oncure.png'
 import super1 from '../img/super1.png'
 import super2 from '../img/super2.png'
-
+import bif from "../img/biff-Photoroom.png"
 
 import i6 from '../img/i6.jpg';
 import i5 from '../img/i5.jpg';
@@ -186,7 +186,7 @@ export default function Portfolio() {
     <section className="container mx-2 text-red-950 z-30 mb-16">
   <header className="rounded-md py-3  z-30 mb-12">
     <section className="mb-36 flex ">
-    <div className="relative flex flex-col items-start font-sans my-12 justify-start mb-4"> <img src={i1} alt="Profile" className="relative rounded-full lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800 my-12 z-30 animate-spin-slow" />
+    <div className="relative flex flex-col items-start font-sans my-12 justify-start mb-4"> <img src={bif} alt="Profile" className="relative rounded-full lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800 my-12 z-30 animate-spin-slow" />
         <div className="  flex flex-col items-center justify-center relative">
           <div className={showText ? "relative mb-4 ml-8 text-3xl font-bold animate-text-appear z-40" : "hidden"}>
             {typedText}
