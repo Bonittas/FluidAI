@@ -68,8 +68,8 @@ export default function Portfolio() {
   }, []);
 
   const text = "Hello, I am Biftu Shibbire";
-  const text2 = "a Graduating Year Software Engineering Student at Addis Ababa Institute of Technology. ";
-  const text3 = "Website, Mobile App and Game Developer";
+  const text2 = "Experienced Website, Mobile App and Game Developer!";
+  const text3 = "";
   const [typedText, setTypedText] = useState("");
   const projects = [
     {
@@ -188,13 +188,13 @@ export default function Portfolio() {
     <section className="mb-36 flex ">
     <div className="relative flex flex-col items-start font-sans my-12 justify-start mb-4"> <img src={bif} alt="Profile" className="relative rounded-full lg:left-48 md:left-32 sm:left-6 sm:w-72 w-32 sm:h-72 h-32 flex items-start justify-start bg-red-800 my-12 z-30 animate-spin-slow" />
         <div className="  flex flex-col items-center justify-center relative">
-          <div className={showText ? "relative mb-4 ml-8 text-3xl font-bold animate-text-appear z-40" : "hidden"}>
+          <div className={showText ? "relative mb-4 ml-8 text-4xl font-bold animate-text-appear z-40" : "hidden"}>
             {typedText}
           </div>
-          <p className={showText && typedText === text ? "relative font-bold text-xl w-3/4 m-4 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear z-40" : "hidden"}>
+          <p className={showText && typedText === text ? "relative font-bold text-2xl w-2/3 m-4 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear z-40" : "hidden"}>
             {displayedText2}
           </p>
-          <p className={showText && typedText === text2 ? "relative mb-6 font-bold text-xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear z-40" : "hidden"}>
+          <p className={showText && typedText === text2 ? "relative mb-6 font-bold text-3xl w-3/4 m-6 text-gradient-to-r from-gray-700 to-gray-700 animate-text-appear z-40" : "hidden"}>
             {displayedText3}
           </p>
         </div>
