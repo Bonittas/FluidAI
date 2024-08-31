@@ -83,7 +83,7 @@ export default function Portfolio() {
       title: 'Oncure',
       imgPath: oncure,
       description: `Virtual medication which includes features like video meetings between doctor and patient, payment integration for card, and other features. Tech stacks used: MERN stack with Redux, Tailwind CSS, WebRTC, Socket.io.`,
-      demoLink: 'https://health-link-olive.vercel.app/',
+      demoLink: 'https://health-link-aov4lyrpc-biftu-shibbires-projects.vercel.app/',
       ghLink: 'https://github.com/Bonittas/Virtual-Medication',
     },
     {
