@@ -3,14 +3,14 @@ import 'tailwindcss/tailwind.css'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Portfolio from './pages/Portfolio';
+import LandingPage from './pages/HomePage4';
 function App() {
   return (
     <>
 
     <Routes>
         <Route>
-        <Route path="/" element={<Portfolio />} />
+        <Route path="/" element={<LandingPage />} />
 
             </Route>
             </Routes>
