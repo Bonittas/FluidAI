@@ -1,9 +1,8 @@
-import logo from './logo.svg'
 import 'tailwindcss/tailwind.css'
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import LandingPage from './pages/HomePage4';
+import LandingPage from './pages/HomePage1';
 function App() {
   return (
     <>
