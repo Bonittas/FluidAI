@@ -1,10 +1,9 @@
 import React from 'react';
-import HeaderLeft from '../components/header/HeaderLeft';
-import HeaderRight from '../components/header/HeaderRight';
+import HeaderRight from '../components/Header';
 import backgroundImage from '../assets/images/background.jpg'; 
 import logo from '../assets/images/logo.png'; 
 import cardImage from '../assets/images/image.png'; 
-import Card2 from '../assets/images/Card2.png'; 
+import Card2 from '../assets/images/Card.png'; 
 
 const HomePage3 = () => {
   return (
@@ -13,16 +12,13 @@ const HomePage3 = () => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="flex justify-between items-center h-full px-10">
-        <div className="flex flex-col items-start">
-          <HeaderLeft />
-        </div>
+
         <div className="flex flex-col mb-32 items-center">
           <img src={logo} alt="Logo" className="h-6 mb-10" /> 
           <p className='text-white w-full text-5xl text-center'>Unlock Seamless</p>
           <p className='text-white w-1/2 text-5xl text-center'>Efficiency</p>
           <button className="bg-white text-black px-8 font-Monospace font-bold py-3 rounded-full mt-6">Join Waitlist</button>
 
-          {/* Existing Cards */}
           <div className='relative ml-6 left-96 bottom-72 bg-black opacity-70 p-2 border-black rounded-lg shadow-lg w-48 h-14'>
             <p className='text-white w-1/2 text-sm text-gray-700'>Next To-Do</p>
             <p className='text-white w-full text-lg'>Renew Car insurance</p>

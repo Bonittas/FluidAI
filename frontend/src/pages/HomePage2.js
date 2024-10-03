@@ -1,28 +1,77 @@
-import React from 'react';
-import backgroundImage from '../assets/images/background.jpg'; 
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import backgroundImage from '../assets/images/background1.jpg'; 
 import logo from '../assets/images/logo.png'; 
+import HomePage2 from './HomePage2';
+import HomePage3 from './HomePage3';
+import HomePage4 from './HomePage4';
 
-const HomePage2 = () => {
+const HomePage1 = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <div
-      className="h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="flex justify-between items-center h-full px-10">
-      <div className="flex flex-col items-start">
-          <Header />
-        </div>
-        <div className="flex flex-col mb-32 items-center">
-          <img src={logo} alt="Logo" className="h-6 mb-12" />
-          <p className='text-white w-full text-5xl'>Unlock Seamless </p>
-          <p className='text-white w-1/2 text-5xl'>Efficiency</p>
-          <button className="bg-white text-black px-8 font-Monospace  font-bold py-3 rounded-full mt-6">Join Waitlist</button>
+    <>
+      {/* Background and Header Section */}
+      <div
+        className="min-h-screen bg-cover bg-center relative" // Set to min-h-screen instead of h-screen
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="flex flex-col md:flex-row justify-between items-center h-full px-5 md:px-10">
+          <div>
+            <Header />
+          </div>
 
+          <div className="flex flex-col items-center mb-5 md:mb-0">
+            <div className="flex items-center">
+              <img src={logo} alt="Logo" className="h-24 md:h-32 mr-4" />
+            </div>
+          </div>
+          <div className="flex flex-col items-end mb-5 md:mb-0"></div>
+
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+              className="text-white focus:outline-none"
+            >
+              {menuOpen ? (
+                <i className="fas fa-times fa-lg" />
+              ) : (
+                <i className="fas fa-bars fa-lg" />
+              )}
+            </button>
+          </div>
         </div>
- 
+
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="flex flex-col items-center bg-gray-800 text-white p-5 md:hidden absolute w-full z-10">
+            <button className="text-white px-4 py-2 rounded mb-2">What we believe</button>
+            <button className="text-white px-4 py-2 rounded mb-2">Our features</button>
+            <button className="text-white px-4 py-2 rounded mb-2">Our story</button>
+            <button className="text-white px-4 py-2 rounded">The wallet</button>
+          </div>
+        )}
       </div>
-    </div>
+
+      {/* Main Content Sections */}
+      <div className="relative z-0"> {/* Ensure these sections are on top of the background */}
+        <div className="my-12"> {/* Add margin to separate sections */}
+          <HomePage2 />
+        </div>
+        <div className="my-12">
+          <HomePage3 />
+        </div>
+        <div className="my-12">
+          <HomePage4 />
+        </div>
+      </div>
+    </>
   );
 };
 
-export default HomePage2;
+export default HomePage1;
